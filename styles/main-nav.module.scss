@@ -1,0 +1,23 @@
+@import './assets/colors.scss';
+
+.navigation {
+	padding: 5px;
+}
+
+.list {
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+
+	&__item {
+		a {
+         line-height: 155%;
+			color: $text-main;
+         transition: all ease 0.2s ;
+			&:hover {
+            color: $gold;
+				text-decoration: underline;
+			}
+		}
+	}
+}

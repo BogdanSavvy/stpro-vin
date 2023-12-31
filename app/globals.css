@@ -39,9 +39,8 @@ body {
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	font-family: Poppins;
-	color: #ffff;
-	font-weight: 300;
+	color: #FFFFFF;
+	font-weight: 400;
 	background-color: #2F343A;
 }
 
@@ -89,4 +88,18 @@ h5,
 h6 {
 	font-size: inherit;
 	font-weight: inherit;
+}
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding-top: 150px;
+}
+
+.wrapper {
+	min-height: 100%;
+   overflow: hidden; 
+   display: flex;
+   flex-direction: column;
+	position: relative;
 }
