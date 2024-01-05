@@ -39,9 +39,9 @@ body {
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	color: #FFFFFF;
+	color: #ffffff;
 	font-weight: 400;
-	background-color: #2F343A;
+	background-color: #2f343a;
 }
 
 input,
@@ -90,16 +90,15 @@ h6 {
 	font-weight: inherit;
 }
 
-.container {
-	max-width: 1440px;
-	margin: 0 auto;
-	padding-top: 150px;
-}
-
 .wrapper {
 	min-height: 100%;
-   overflow: hidden; 
-   display: flex;
-   flex-direction: column;
-	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+._container {
+	max-width: 1440px;
+	padding: 0 15px;
+	margin: 0 auto;
 }

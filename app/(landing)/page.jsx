@@ -1,9 +1,11 @@
-import Container from '@/components/ui/container';
+import Hero from '@/components/hero';
+import ServisesSlider from '@/components/servises-slider';
 
 function Home() {
 	return (
-		<main>
-			<Container>asff</Container>
+		<main className="wrapper">
+			<Hero imageUrl="/hero.jpg" />
+			<ServisesSlider />
 		</main>
 	);
 }
