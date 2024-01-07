@@ -1,0 +1,17 @@
+@import './assets/colors.scss';
+
+.mainButton {
+   flex: 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px 25px;
+   max-width: 200px;
+   background-color: $gold;
+	color: $text-main;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 158.203%; /* 25.313px */
+	letter-spacing: 1.6px;
+	text-transform: uppercase;
+}

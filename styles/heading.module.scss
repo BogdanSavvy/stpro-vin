@@ -1,0 +1,31 @@
+@import './assets/colors.scss';
+
+.heading {
+   position: relative;
+   font-size: 40px;
+   font-weight: 700;
+   line-height: 123.047%; /* 49.219px */
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   padding: 20px 0;
+   &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background-color: $gold;
+   }
+
+   @media(max-width: 1024px){
+      font-size: 28px;
+      padding: 15px 0;
+   }
+   @media(max-width: 767.9px){
+      font-size: 24px;
+   }
+   @media(max-width: 425px){
+      font-size: 18px;
+   }
+}

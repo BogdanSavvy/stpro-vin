@@ -12,7 +12,7 @@ function Header() {
 			<Container>
 				<div className={styles.header__bottom}>
 					<Link href="/" className={styles.header__logo}>
-						ST PRO VIN
+						<h2>ST PRO VIN</h2>
 					</Link>
 					<MainNav />
 					<Burger />

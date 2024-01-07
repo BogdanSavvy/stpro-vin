@@ -1,9 +1,11 @@
-import React from 'react'
+import Container from '@/components/ui/container';
 
 function Footer() {
-  return (
-    <div>Footer</div>
-  )
+	return (
+		<footer>
+			<Container>Footer</Container>
+		</footer>
+	);
 }
 
-export default Footer
+export default Footer;
