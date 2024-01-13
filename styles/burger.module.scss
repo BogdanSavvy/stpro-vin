@@ -6,6 +6,7 @@
 	position: relative;
 	cursor: pointer;
 	display: none;
+	background: transparent;
 
 	@media (max-width: 768px){
 		display: inline-block;

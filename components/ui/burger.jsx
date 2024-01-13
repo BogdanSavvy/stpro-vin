@@ -1,26 +1,18 @@
 'use client';
 
-import { useState } from 'react';
-
 import styles from '@/styles/burger.module.scss';
 
-function Burger() {
-	const [open, setOpen] = useState(false);
-
-	const handleClick = () => {
-		setOpen(!open);
-	};
-
+function Burger({ isOpen, onCklick }) {
 	return (
 		<>
-		<div
-			className={`${styles.nav_icon_4} ${open && styles.open}`}
-			onClick={handleClick}
-		>
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
+			<button
+				className={`${styles.nav_icon_4} ${isOpen && styles.open}`}
+				onClick={onCklick}
+			>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 		</>
 	);
 }

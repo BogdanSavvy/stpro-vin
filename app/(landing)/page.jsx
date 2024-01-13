@@ -1,14 +1,16 @@
 import Hero from '@/components/hero';
 import AboutUs from '@/components/about-us';
 import ServisesSlider from '@/components/servises-slider';
+import FAQ from '@/components/faq';
 
 function Home() {
 	return (
-		<main className="wrapper">
+		<>
 			<Hero imageUrl="/hero.jpg" />
 			<ServisesSlider />
-			<AboutUs/>
-		</main>
+			<AboutUs />
+			<FAQ/>
+		</>
 	);
 }
 

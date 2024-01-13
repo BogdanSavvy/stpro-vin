@@ -28,30 +28,31 @@
 	z-index: 2;
 	display: flex;
 	flex-direction: column;
+	gap: 10px;
 	border: 2px solid $gold;
 	padding: 60px 70px;
 	text-align: center;
 
-	@media(max-width:1024px){
+	@media (max-width: 1024px) {
 		padding: 50px 60px;
 	}
 
-	@media(max-width:767.9px){
+	@media (max-width: 767.9px) {
 		padding: 30px 40px;
 	}
 
 	&__title {
 		font-size: 52px;
 		font-weight: 700;
+		line-height: 135%;
 		letter-spacing: 3px;
 		text-transform: uppercase;
-		margin-bottom: 20px;
 
-		@media(max-width:1024px){
+		@media (max-width: 1024px) {
 			font-size: 42px;
 		}
-		
-		@media(max-width:767.9px){
+
+		@media (max-width: 767.9px) {
 			font-size: 36px;
 			margin-bottom: 10px;
 		}
@@ -63,8 +64,15 @@
 		line-height: 158.203%;
 		color: $text-secondary;
 
-		@media(max-width:767.9px){
+		@media (max-width: 767.9px) {
 			font-size: 16px;
 		}
+	}
+}
+
+.br {
+	display: none;
+	@media (max-width: 590.9px) {
+		display: block;
 	}
 }

@@ -1,21 +1,45 @@
 @import './assets/colors.scss';
 
 .sidebar {
-	position: absolute;
+	display: none;
+	position: fixed;
 	top: 0;
-	left: 0;
-	z-index: 10;
-	width: 300px;
+	left: -2000px;
+	z-index: 80;
+	width: 500px;
 	height: 100%;
 	background-color: $dark;
 	display: flex;
-   flex-direction: column;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	transition: all ease 0.35s;
+
 	&__menu {
-		padding: 10px;
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
+	}
+
+	&.opened {
+		@media (max-width: 768px) {
+			left: 0;
+			transition: all ease 0.35s;
+		}
+	}
+
+	&__menuItem {
+		a {
+			color: $text-main;
+		}
+	}
+	&__dropDown {
+		a {
+			color: $gold;
+		}
+	}
+
+	@media (max-width: 768px) {
+		display: flex;
 	}
 }
