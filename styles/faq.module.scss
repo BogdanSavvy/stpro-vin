@@ -1,11 +1,41 @@
 @import './assets/colors.scss';
 .faq {
-	padding: 140px 0;
+	padding: 120px 0 100px 0;
+
+	@media (max-width: 1024px) {
+		padding: 100px 0 80px 0;
+	}
+	@media (max-width: 768px) {
+		padding: 80px 0 80px 0;
+	}
+
 
 	&__acordion {
+		background-color: $lighterBg;
+		color: $text-main;
+		padding: 20px 10px;
 	}
 	&__summary {
+		font-size: 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+		@media (max-width:768.9px){
+			font-size: 18px;
+		}
 	}
 	&__details {
+		line-height: 165%;
+		font-size: 16px;
+		p {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+		@media (max-width:768.9px){
+			font-size: 14px;
+		}
+	}
+	&__expandIcon {
+		color: $gold;
 	}
 }

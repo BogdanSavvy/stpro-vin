@@ -44,6 +44,7 @@ function ServisesSlider() {
 									src={'/screed-machine.png'}
 									fill
 									alt="slider image screed"
+									sizes="100%"
 								/>
 							</figure>
 						</article>
@@ -67,6 +68,7 @@ function ServisesSlider() {
 									src={'/plastering-machine.png'}
 									fill
 									alt="slider image screed"
+									sizes="100%"
 								/>
 							</figure>
 						</article>
@@ -90,6 +92,7 @@ function ServisesSlider() {
 									src={'/screed-machine.png'}
 									fill
 									alt="slider image screed"
+									sizes="100%"
 								/>
 							</figure>
 						</article>
