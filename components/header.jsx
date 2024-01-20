@@ -1,13 +1,13 @@
 'use client';
 
-import Link from 'next/link';
 import { useState } from 'react';
 
 import styles from '@/styles/header.module.scss';
-import HeaderNav from '@/components/header-nav';
+import MainNav from '@/components/main-nav';
 import Container from '@/components/ui/container';
 import Burger from '@/components/ui/burger';
 import Sidebar from '@/components/ui/sidebar';
+import Logo from '@/components/ui/logo';
 
 function Header() {
 	const [isOpen, setOpen] = useState(false);
@@ -26,10 +26,8 @@ function Header() {
 				<section>
 					<Container>
 						<div className={styles.header__bottom}>
-							<Link href="/" className={styles.header__logo}>
-								<h2>ST PRO VIN</h2>
-							</Link>
-							<HeaderNav />
+							<Logo />
+							<MainNav position={'header'} />
 							<Burger isOpen={isOpen} onCklick={handleClick} />
 						</div>
 					</Container>

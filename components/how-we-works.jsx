@@ -1,6 +1,6 @@
 'use client';
 
-import Box from '@mui/material/Box';
+import { useState } from 'react';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
@@ -10,28 +10,40 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
 import styles from '@/styles/how-we-works.module.scss';
-import Container from './ui/container';
-import { useState } from 'react';
-import Heading from './ui/heading';
+import Container from '@/components/ui/container';
+import Heading from '@/components/ui/heading';
+import MainButton from './ui/main-button';
 
 const steps = [
 	{
-		label: 'Select campaign settings',
-		description: `For each ad campaign that you create, you can control how much
-					you're willing to spend on clicks and conversions, which networks
-					and geographical locations you want your ads to show on, and more.`,
+		label: 'Виклик замірника',
+		description: `Зателефонувавши нам по телефону або залишивши заявку на сайті, 
+		ви отримаєте відповіді на питання щодо ремонту квартири "під ключ", 
+		а для отримання більш детальної інформації Вам буде рекомендовано виїзд виконроба на об'єкт протягом 24 годин для виконання виміру.`,
 	},
 	{
-		label: 'Create an ad group',
-		description:
-			'An ad group contains one or more ads which target a shared set of keywords.',
+		label: "Замір об'єкту",
+		description: `Перший особистий контакт з нашою компанією в особі виконроба, при зустрічі з яким 
+			Ви отримаєте професійну консультацію з ремонтно-оздоблювальних робіт. 
+			Проводиться замір приміщень, приймаються Ваші побажання та рекомендації.`,
 	},
 	{
-		label: 'Create an ad',
-		description: `Try out different ad text to see what brings in the most customers,
-					and learn how to enhance your ads using features like ad extensions.
-					If you run into any problems with your ads, find out how to tell if
-					they're running and how to resolve approval issues.`,
+		label: 'Узгодження організаційних питань та розрахунок вартості',
+		description: `На підставі даних виміру наш кошторисник на протязі 24 годин надає детальний кошторис робіт, 
+		після узгодження якого складається кошторис будівельних матеріалів із зазначенням їх обсягів, марок та вартості. 
+		Складені кошториси прозорі та не мають прихованих робіт.`,
+	},
+	{
+		label: 'Виконання робіт',
+		description: `На підставі даних виміру наш кошторисник на протязі 24 годин надає детальний кошторис робіт, 
+		після узгодження якого складається кошторис будівельних матеріалів із зазначенням їх обсягів, марок та вартості. 
+		Складені кошториси прозорі та не мають прихованих робіт.`,
+	},
+	{
+		label: "Здача об'єкту",
+		description: `Після закінчення ремонтно-оздоблювальних робіт проводиться прибирання приміщення та прилеглих територій, 
+		виконується вивіз сміття, надається фінальний звіт та складається акт виконаних робіт. 
+		Після цього набувають чинності гарантійні зобов'язання.`,
 	},
 ];
 
@@ -39,65 +51,50 @@ function HowWeWorks() {
 	const [activeStep, setActiveStep] = useState(0);
 
 	const handleNext = () => {
+		if (activeStep === 4) {
+			setActiveStep(-1);
+		}
 		setActiveStep(prevActiveStep => prevActiveStep + 1);
+		
 	};
 
 	const handleBack = () => {
 		setActiveStep(prevActiveStep => prevActiveStep - 1);
 	};
 
-	const handleReset = () => {
-		setActiveStep(0);
-	};
+	// const handleReset = () => {
+	// 	setActiveStep(0);
+	// };
 
 	return (
 		<section className={styles.howWeWorks}>
 			<Container>
-				<Heading>Як ми працюємо</Heading>
-				<Stepper activeStep={activeStep} orientation="vertical">
-					{steps.map((step, index) => (
-						<Step key={step.label}>
-							<StepLabel
-								optional={
-									index === 2 ? (
-										<Typography variant="caption">Last step</Typography>
-									) : null
-								}
-							>
-								{step.label}
-							</StepLabel>
-							<StepContent>
-								<Typography>{step.description}</Typography>
-								{/* <Box sx={{ mb: 2 }}> */}
-									<div>
-										<Button
-											variant="contained"
-											onClick={handleNext}
-											sx={{ mt: 1, mr: 1 }}
-										>
-											{index === steps.length - 1 ? 'Finish' : 'Continue'}
-										</Button>
-										<Button
-											disabled={index === 0}
-											onClick={handleBack}
-											sx={{ mt: 1, mr: 1 }}
-										>
-											Back
-										</Button>
+				<div className={styles.content}>
+					<Heading>Як ми працюємо</Heading>
+					<Stepper activeStep={activeStep} orientation="vertical">
+						{steps.map((step, index) => (
+							<Step className={styles.howWeWorks__step} key={step.label}>
+								<StepLabel className={styles.howWeWorks__stepLabel}>
+									{step.label}
+								</StepLabel>
+								<StepContent className={styles.howWeWorks__stepContent}>
+									<p className={styles.howWeWorks__text}>{step.description}</p>
+									<div className={styles.howWeWorks__stepActions}>
+										<MainButton clickEvent={handleNext}>
+											{index === steps.length - 1 ? 'Кінець' : 'Далі'}
+										</MainButton>
+										<MainButton disabled={index === 0} clickEvent={handleBack}>
+											Попередній
+										</MainButton>
 									</div>
-								{/* </Box> */}
-							</StepContent>
-						</Step>
-					))}
-				</Stepper>
-				{activeStep === steps.length && (
-					<Paper square elevation={0} sx={{ p: 3 }}>
-						<Typography>All steps completed - you&apos;re finished</Typography>
-						<Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-							Reset
-						</Button>
-					</Paper>
-				)}
+								</StepContent>
+							</Step>
+						))}
+					</Stepper>
+					{/* {activeStep === steps.length && (
+						<MainButton clickEvent={handleReset}>Reset</MainButton>
+					)} */}
+				</div>
 			</Container>
 		</section>
 	);

@@ -2,11 +2,42 @@
 
 .howWeWorks {
 	padding: 120px 0 100px 0;
-
+	
 	@media (max-width: 1024px) {
 		padding: 100px 0 80px 0;
 	}
 	@media (max-width: 768px) {
 		padding: 80px 0 80px 0;
 	}
+	
+
+	&__step {
+	}
+	&__stepLabel {
+		padding:15px 0;
+		span{
+			color:$text-secondary;
+			font-size: 18px;
+			span{
+				padding-left: 10px;
+			}
+		}
+		svg{
+			width: 40px;
+			height: 40px;
+		}
+	}
+	&__stepContent {
+		color: $text-secondary;
+		line-height: 155%;
+		p{
+			margin-bottom: 15px;
+		}
+	}
+	&__stepActions {
+		display: flex;
+		gap: 15px;
+	}
+	
+	
 }

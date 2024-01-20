@@ -13,12 +13,25 @@
 	line-height: 158.203%; /* 25.313px */
 	letter-spacing: 1.6px;
 	text-transform: uppercase;
-	background: rgb(0, 172, 238);
 	background: linear-gradient(
 		0deg,
 		rgb(238, 190, 100) 0%,
-		rgb(200, 163, 95) 100%
+		rgb(218, 177, 102) 100%
 	);
+	&:disabled {
+		pointer-events: none;
+		color: $lighterBg;
+		background: rgb(121, 102, 68);
+		span {
+			&::before,
+			::after {
+				height: 0;
+				width: 0;
+				display: none;
+			}
+		}
+	}
+
 	transition: all 0.3s ease;
 
 	span {

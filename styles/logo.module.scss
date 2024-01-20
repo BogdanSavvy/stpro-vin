@@ -1,0 +1,28 @@
+@import './assets/colors.scss';
+
+.logo {
+	position: relative;
+	display: inline-block;
+	color: $text-main;
+	font-weight: 600;
+	font-size: 24px;
+	padding: 10px 10px 10px 0;
+	&::before {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 3px;
+		width: 80%;
+		background-color: $gold;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+		width: 3px;
+		background-color: $gold;
+	}
+}

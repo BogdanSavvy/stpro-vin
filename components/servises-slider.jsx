@@ -5,11 +5,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/scss';
 
+import styles from '@/styles/servises-slider.module.scss';
 import Container from '@/components/ui/container';
 import MainButton from '@/components/ui/main-button';
 import SwiperNavButtons from '@/components/ui/swiper-nav-buttons';
-import styles from '@/styles/servises-slider.module.scss';
-import Heading from './ui/heading';
+import Heading from '@/components/ui/heading';
 
 function ServisesSlider() {
 	return (
