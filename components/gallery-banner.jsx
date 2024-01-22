@@ -17,9 +17,9 @@ function GalleryBanner() {
 					<Swiper
 						effect={'coverflow'}
 						coverflowEffect={{
-							rotate: 20,
+							rotate: 30,
 							stretch: 0,
-							depth: 80,
+							depth: 90,
 							modifier: 1,
 							slideShadows: false,
 						}}
@@ -29,11 +29,10 @@ function GalleryBanner() {
 						keyboard={{
 							enabled: true,
 						}}
-						spaceBetween={30}
 						slidesPerView={1}
 						breakpoints={{
 							425: {
-								slidesPerView: 1,
+								slidesPerView: 2,
 								spaceBetween: 0,
 							},
 							768: {
@@ -57,37 +56,67 @@ function GalleryBanner() {
 					>
 						<SwiperSlide>
 							<div className={styles.galleryBanner__slide}>
-								<Image fill src="/hero_2.webp" alt="miniGalery image" />
+								<Image
+									fill
+									src="/hero_2.webp"
+									alt="miniGalery image"
+									sizes="100%"
+								/>
 								<button>Більше</button>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
 							<div className={styles.galleryBanner__slide}>
-								<Image fill src="/hero_2.webp" alt="miniGalery image" />
+								<Image
+									fill
+									src="/hero_2.webp"
+									alt="miniGalery image"
+									sizes="100%"
+								/>
 								<button>Більше</button>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
 							<div className={styles.galleryBanner__slide}>
-								<Image fill src="/hero_2.webp" alt="miniGalery image" />
+								<Image
+									fill
+									src="/hero_2.webp"
+									alt="miniGalery image"
+									sizes="100%"
+								/>
 								<button>Більше</button>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
 							<div className={styles.galleryBanner__slide}>
-								<Image fill src="/hero_2.webp" alt="miniGalery image" />
+								<Image
+									fill
+									src="/hero_2.webp"
+									alt="miniGalery image"
+									sizes="100%"
+								/>
 								<button>Більше</button>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
 							<div className={styles.galleryBanner__slide}>
-								<Image fill src="/hero_2.webp" alt="miniGalery image" />
+								<Image
+									fill
+									src="/hero_2.webp"
+									alt="miniGalery image"
+									sizes="100%"
+								/>
 								<button>Більше</button>
 							</div>
 						</SwiperSlide>
 						<SwiperSlide>
 							<div className={styles.galleryBanner__slide}>
-								<Image fill src="/hero_2.webp" alt="miniGalery image" />
+								<Image
+									fill
+									src="/hero_2.webp"
+									alt="miniGalery image"
+									sizes="100%"
+								/>
 								<button>Більше</button>
 							</div>
 						</SwiperSlide>

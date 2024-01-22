@@ -62,8 +62,8 @@ function ServisesSlider() {
 					}}
 					navigation={true}
 				>
-					{servises.map(servise => (
-						<SwiperSlide>
+					{servises.map((servise, index) => (
+						<SwiperSlide key={index}>
 							<article className={styles.slide}>
 								<div className={styles.slide__details}>
 									<Heading>{servise.header}</Heading>

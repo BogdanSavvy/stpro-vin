@@ -7,11 +7,11 @@
 	flex-direction: column;
 	height: 100%;
 	justify-content: space-between;
-   position: absolute;
-   padding: 0px 20px;
-   right: 0;
-   top: 0;
-	button{
+	position: absolute;
+	padding: 0px 20px;
+	right: 0;
+	top: 0;
+	button {
 		height: 50px;
 	}
 
@@ -105,6 +105,14 @@
 				background-color: $gold;
 				transform: rotate(45deg);
 			}
+		}
+	}
+	
+	&__nextButton,
+	&__prevButton {
+		transition: all 0.2s ease;
+		&:hover {
+			scale: 1.1;
 		}
 	}
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 import styles from '@/styles/main-nav.module.scss';
@@ -8,15 +9,21 @@ import styles from '@/styles/main-nav.module.scss';
 function MainNav({ position }) {
 	const pathName = usePathname();
 
+	const [openAcordion, setOpenAcordion] = useState(false);
+
+	const handleClick = () => {
+		setOpenAcordion(!openAcordion);
+	};
+
 	const routes = [
 		{
 			href: '/about',
-			name: 'Про нас',
+			label: 'Про нас',
 			isActive: pathName === '/about',
 		},
 		{
 			href: '/servises',
-			name: 'Послуги',
+			label: 'Послуги',
 			isActive:
 				(pathName === '/servises/screed') |
 				'/servises/plaster' |
@@ -24,74 +31,118 @@ function MainNav({ position }) {
 			links: [
 				{
 					href: '/servises/screed',
-					name: 'Стяжка підлоги',
+					label: 'Стяжка підлоги',
 				},
 				{
 					href: '/servises/plaster',
-					name: 'Штукатурка стін',
+					label: 'Штукатурка стін',
 				},
 				{
 					href: '/servises/roofing',
-					name: 'Покрівля дахів',
+					label: 'Покрівля дахів',
 				},
 			],
 		},
 		{
 			href: '/galery',
-			name: 'Портфоліо',
+			label: 'Портфоліо',
 			isActive: pathName === '/galery',
 		},
 		{
 			href: '/contacts',
-			name: 'Контакти',
+			label: 'Контакти',
 			isActive: pathName === '/contacts',
 		},
 	];
 
-	return (
-			<nav className={styles.headerNavigation}>
-				<ul className={styles.headerNavigation__list}>
-					{routes.map(route => (
-						<>
+	if (position === 'header') {
+		return (
+			<nav className={styles.navigation}>
+				<ul className={`${styles.navigation__list}`}>
+					{routes.map((route, index) => (
+						<li key={index}>
 							{route.links ? (
-								<li
-									className={`${styles.headerNavigation__ddTrigger} ${
+								<span
+									className={`${styles.navigation__ddTrigger} ${
 										route.isActive ? styles.activeLink : ''
 									}`}
 									key={route.href}
 								>
-									{route.name}
+									{route.label}
 									<span></span>
-									<ul className={styles.headerNavigation__ddList}>
+									<ul className={styles.navigation__ddList}>
 										{route.links.map(ddItem => (
 											<li
-												className={styles.headerNavigation__ddItem}
+												className={styles.navigation__ddItem}
 												key={ddItem.href}
 											>
-												<Link href={ddItem.href}>{ddItem.name}</Link>
+												<Link href={ddItem.href}>{ddItem.label}</Link>
 											</li>
 										))}
 									</ul>
-								</li>
+								</span>
 							) : (
-								<li className={styles.headerNavigation__item} key={route.href}>
+								<span className={styles.navigation__item} key={route.href}>
 									<Link
 										href={route.href}
 										className={route.isActive ? styles.activeLink : ''}
 									>
-										{route.name}
+										{route.label}
 									</Link>
-								</li>
+								</span>
 							)}
-						</>
+						</li>
 					))}
 				</ul>
 			</nav>
 		);
-	
+	}
+
 	if (position === 'sidebar') {
 		return (
-			<></>
+			<nav className={styles.sidebarNav}>
+				<ul className={`${styles.sidebarNav__list}`}>
+					{routes.map((route, index) => (
+						<li key={index}>
+							{route.links ? (
+								<div
+									onClick={handleClick}
+									className={`${styles.sidebarNav__accordion} ${
+										styles.accordion
+									} ${openAcordion ? styles.open : ''}`}
+									key={route.href}
+								>
+									{route.label}
+									<span></span>
+									<ul
+										className={`${styles.accordion__list} ${
+											openAcordion ? styles.open : ''
+										}`}
+									>
+										{route.links.map(link => (
+											<li
+												className={styles.accordion__item}
+												key={link.href}
+											>
+												<Link href={link.href}>{link.label}</Link>
+											</li>
+										))}
+									</ul>
+								</div>
+							) : (
+								<span className={styles.sidebarNav__item} key={route.href}>
+									<Link
+										href={route.href}
+										className={route.isActive ? styles.activeLink : ''}
+									>
+										{route.label}
+									</Link>
+								</span>
+							)}
+						</li>
+					))}
+				</ul>
+			</nav>
 		);
 	}
 }

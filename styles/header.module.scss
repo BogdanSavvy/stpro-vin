@@ -3,20 +3,12 @@
 .header {
 	position: fixed;
 	width: 100%;
-	height: 140px;
 	box-shadow: 3px;
 	z-index: 500;
-	background-color: $dark;
-	@media (max-width: 768px) {
-		height: 120px;
-	}
-	&__upper {
-		height: 40px;
-		background-color: $gold;
-		padding: 10px;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
+	background-color: transparent;
+	transition: all 0.3s ease;
+
+	&__ticker {
 	}
 
 	&__bottom {
@@ -30,5 +22,64 @@
 		@media (max-width: 768px) {
 			height: 80px;
 		}
+	}
+}
+
+.ticker {
+	width: 200%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	background-color: $gold;
+	
+	@media (max-width: 768px) {
+		width: 300%;
+	}
+	@media (max-width: 560px) {
+		width: 500%;
+	}
+
+	&__item {
+		font-weight: 500;
+		letter-spacing: 1px;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		animation: infinit-stroke 20s linear infinite;
+		@media (max-width: 768px) {
+			animation-duration: 15s;
+			width: 150%;
+		}
+		@media (max-width: 560px) {
+			width: 250%;
+		}
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+			color: $text-main;
+		}
+	}
+}
+
+@keyframes infinit-stroke {
+	0% {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+.stopAnimation {
+	animation-play-state: paused;
+}
+
+.active {
+	transition: all 0.3s ease;
+	&.header {
+		background-color: $dark;
+		transform: translateY(-40px);
 	}
 }
