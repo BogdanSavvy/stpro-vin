@@ -134,7 +134,6 @@ h6 {
 	transition: all 0.2s ease;
 }
 
-
 /* MUI steper classes */
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
 	color: #c8a35f;
@@ -142,9 +141,12 @@ h6 {
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
 	color: #be964cb4;
 }
-
 .css-1hv8oq8-MuiStepLabel-label.Mui-active {
 	color: #ffff;
+}
+.css-1hv8oq8-MuiStepLabel-label.Mui-completed {
+	color: #ffffff8c;
+	font-weight: 500;
 }
 .css-14yr603-MuiStepContent-root {
 	margin-left: 20px;

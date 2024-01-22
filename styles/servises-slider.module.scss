@@ -36,6 +36,11 @@
 	gap: 15px;
 	width: 100%;
 	height: 500px;
+	margin: 30px 0;
+	@media (max-width: 525px) {
+		row-gap: 25px;
+		flex-direction: column;
+	}
 
 	&__details {
 		z-index: 2;
@@ -44,6 +49,12 @@
 		flex-direction: column;
 		justify-content: center;
 		gap: 10px;
+		@media (max-width: 525px) {
+			flex: 1 1 auto;
+			h3 {
+				max-width: 250px;
+			}
+		}
 	}
 	&__description {
 		font-size: 18px;
@@ -51,12 +62,10 @@
 		font-weight: 400;
 		line-height: 158.203%; /* 28.477px */
 		flex: 1 1 auto;
-		@media (max-width: 1024px) {
+		@media (max-width: 1023.9px) {
 			font-size: 16px;
 		}
-		@media (max-width: 767.9px) {
-			font-size: 14px;
-		}
+		
 	}
 	&__image {
 		flex: 1 1 50%;
@@ -67,5 +76,8 @@
 			position: absolute;
 			object-fit: contain;
 		}
+		// @media (max-width: 375px) {
+		// 	display: none;
+		// }
 	}
 }

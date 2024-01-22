@@ -5,14 +5,12 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import StepContent from '@mui/material/StepContent';
-import Button from '@mui/material/Button';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
 
 import styles from '@/styles/how-we-works.module.scss';
 import Container from '@/components/ui/container';
 import Heading from '@/components/ui/heading';
-import MainButton from './ui/main-button';
+import MainButton from '@/components/ui/main-button';
+import SecondaryButton from './ui/secondary-button';
 
 const steps = [
 	{
@@ -55,16 +53,11 @@ function HowWeWorks() {
 			setActiveStep(-1);
 		}
 		setActiveStep(prevActiveStep => prevActiveStep + 1);
-		
 	};
 
 	const handleBack = () => {
 		setActiveStep(prevActiveStep => prevActiveStep - 1);
 	};
-
-	// const handleReset = () => {
-	// 	setActiveStep(0);
-	// };
 
 	return (
 		<section className={styles.howWeWorks}>
@@ -73,27 +66,31 @@ function HowWeWorks() {
 					<Heading>Як ми працюємо</Heading>
 					<Stepper activeStep={activeStep} orientation="vertical">
 						{steps.map((step, index) => (
-							<Step className={styles.howWeWorks__step} key={step.label}>
-								<StepLabel className={styles.howWeWorks__stepLabel}>
-									{step.label}
-								</StepLabel>
-								<StepContent className={styles.howWeWorks__stepContent}>
-									<p className={styles.howWeWorks__text}>{step.description}</p>
-									<div className={styles.howWeWorks__stepActions}>
-										<MainButton clickEvent={handleNext}>
-											{index === steps.length - 1 ? 'Кінець' : 'Далі'}
-										</MainButton>
-										<MainButton disabled={index === 0} clickEvent={handleBack}>
-											Попередній
-										</MainButton>
-									</div>
-								</StepContent>
+							<Step key={step.label}>
+								<article className={styles.howWeWorks__step}>
+									<StepLabel className={styles.howWeWorks__stepLabel}>
+										{step.label}
+									</StepLabel>
+									<StepContent className={styles.howWeWorks__stepContent}>
+										<p className={styles.howWeWorks__text}>
+											{step.description}
+										</p>
+										<div className={styles.howWeWorks__stepActions}>
+											<MainButton clickEvent={handleNext}>
+												{index === steps.length - 1 ? 'Кінець' : 'Далі'}
+											</MainButton>
+											<SecondaryButton
+												disabled={index === 0}
+												clickEvent={handleBack}
+											>
+												Попередній
+											</SecondaryButton>
+										</div>
+									</StepContent>
+								</article>
 							</Step>
 						))}
 					</Stepper>
-					{/* {activeStep === steps.length && (
-						<MainButton clickEvent={handleReset}>Reset</MainButton>
-					)} */}
 				</div>
 			</Container>
 		</section>
