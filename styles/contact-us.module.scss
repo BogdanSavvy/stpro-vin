@@ -20,17 +20,21 @@
 			flex-direction: column;
 		}
 	}
-
-	&__text {
+	&__details {
 		flex: 0 1 50%;
 		display: flex;
 		flex-direction: column;
-		row-gap: 15px;
+		row-gap: 35px;
+	}
+	&__text {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
 		p {
 			line-height: 155%;
 		}
 	}
-
 	&__form {
 		border: 2px solid $gold;
 		background-color: $dark;
@@ -39,7 +43,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 30px;
-		height: 600px;
+		//height: 600px;
 		button {
 			align-self: flex-end;
 			justify-self: flex-end;
@@ -48,7 +52,6 @@
 	&__bigTxtArea {
 		flex: 1 1 auto;
 	}
-
 	&__field {
 		label {
 			color: $text-main;
@@ -67,6 +70,55 @@
 		}
 		input {
 			color: $text-main;
+		}
+	}
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 25px;
+		@media (max-width: 767.9px) {
+			flex-direction: row;
+		}
+		@media (max-width: 650px) {
+			flex-direction: column;
+		}
+	}
+}
+
+.card {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	@media (max-width: 767.9px) {
+		gap: 10px;
+	}
+
+	&__figure {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+
+		img {
+			filter: invert(1);
+		}
+	}
+	&__caption {
+		text-transform: uppercase;
+	}
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		a {
+			color: $text-main;
+			font-size: 18px;
+			transition: all 0.3s ease;
+			&:hover {
+				color: $gold;
+				text-decoration: underline;
+			}
 		}
 	}
 }

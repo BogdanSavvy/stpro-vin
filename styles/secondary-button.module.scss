@@ -9,6 +9,9 @@
 	text-transform: uppercase;
 	font-size: 18px;
 	padding: 10px 15px;
+	a {
+		color: $gold;
+	}
 	span {
 		position: relative;
 		z-index: 2;
@@ -42,6 +45,9 @@
 	}
 
 	&:hover {
+		a {
+			color: $text-main;
+		}
 		span {
 			color: $text-main;
 		}

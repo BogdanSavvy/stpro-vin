@@ -107,7 +107,7 @@ function ContactUsForm() {
 				name="servise"
 				render={({ field }) => (
 					<FormControl className={styles.contactUs__field}>
-						<InputLabel>Оберіть послугу</InputLabel>
+						<InputLabel>Оберіть послугу (не обов'язково)</InputLabel>
 						<Select label="Послуги" variant="standard" {...field}>
 							{selectOptions.map((option, index) => (
 								<MenuItem key={index} value={option.name}>

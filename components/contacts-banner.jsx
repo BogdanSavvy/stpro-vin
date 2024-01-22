@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from '@/styles/contacts-banner.module.scss';
 import Container from '@/components/ui/container';
 import MainButton from '@/components/ui/main-button';
+import Link from 'next/link';
 
 function ContactsBanner() {
 	return (
@@ -16,7 +17,9 @@ function ContactsBanner() {
 					Зв'яжись з нами сьогодні та отримай <span>безкоштовну</span>{' '}
 					консультацію по будь якому питанню ...
 				</p>
-				<MainButton>Зв'язатись</MainButton>
+				<MainButton>
+					<Link href="/contacts">Зв'язатись</Link>
+				</MainButton>
 			</div>
 			{/* </Container> */}
 			<Image fill src="/stajka_2.jpg" alt="styazhka_banner" sizes="100%" />
