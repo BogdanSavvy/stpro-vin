@@ -11,10 +11,12 @@ import {
 	MenuItem,
 	FormControl,
 } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import styles from '@/styles/contact-us.module.scss';
 import MainButton from '@/components/ui/main-button';
 import { sendOrderAction } from '@/action/sendOrderAction';
+import { red } from '@mui/material/colors';
 
 function ContactUsForm() {
 	const phoneRegExp =
@@ -73,63 +75,89 @@ function ContactUsForm() {
 		return reset();
 	};
 
+	const theme = createTheme({
+		palette: {
+			primary: {
+				main: '#C8A35F',
+				contrastText: '#fff',
+			},
+			text: {
+				primary: '#fff',
+			},
+		},
+		components: {
+			MuiPaper: {
+				styleOverrides: {
+					root: {
+						fontSize: '2rem',
+						backgroundColor: '#393F47',
+					},
+				},
+			},
+		},
+	});
+
 	return (
-		<form
-			onSubmit={handleSubmit(onSubmit)}
-			className={styles.contactUs__form}
-			noValidate
-		>
-			<TextField
-				{...register('name')}
-				required
-				label="Ім'я"
-				variant="standard"
-				multiline
-				placeholder="ПІБ"
-				error={errors.name && true}
-				helperText={errors.name?.message}
-				className={styles.contactUs__field}
-			/>
-			<TextField
-				{...register('phoneNumber')}
-				required
-				label="Номер телефону"
-				variant="standard"
-				InputProps={{
-					startAdornment: <InputAdornment position="start">+38</InputAdornment>,
-				}}
-				error={errors.phoneNumber && true}
-				helperText={errors.phoneNumber?.message}
-				className={styles.contactUs__field}
-			/>
-			<Controller
-				control={control}
-				name="servise"
-				render={({ field }) => (
-					<FormControl className={styles.contactUs__field}>
-						<InputLabel>Оберіть послугу (не обов'язково)</InputLabel>
-						<Select label="Послуги" variant="standard" {...field}>
-							{selectOptions.map((option, index) => (
-								<MenuItem key={index} value={option.name}>
-									{option.name}
-								</MenuItem>
-							))}
-						</Select>
-					</FormControl>
-				)}
-			/>
-			<TextField
-				{...register('message')}
-				label="Повідомлення (не обов'язково)"
-				variant="standard"
-				multiline
-				rows={5}
-				error={errors.message && true}
-				helperText={errors.message?.message}
-				className={`${styles.contactUs__field} ${styles.contactUs__bigTxtArea}`}
-			/>
-			<MainButton type="submit">Надіслати</MainButton>
-		</form>
+		<ThemeProvider theme={theme}>
+			<form
+				onSubmit={handleSubmit(onSubmit)}
+				className={styles.contactUs__form}
+				noValidate
+			>
+				<TextField
+					{...register('name')}
+					required
+					label="Ім'я"
+					variant="standard"
+					multiline
+					placeholder="ПІБ"
+					error={errors.name && true}
+					helperText={errors.name?.message}
+					className={styles.contactUs__field}
+				/>
+				<TextField
+					{...register('phoneNumber')}
+					required
+					label="Номер телефону"
+					variant="standard"
+					InputProps={{
+						startAdornment: (
+							<InputAdornment position="start">+38</InputAdornment>
+						),
+					}}
+					error={errors.phoneNumber && true}
+					helperText={errors.phoneNumber?.message}
+					className={styles.contactUs__field}
+				/>
+				<Controller
+					control={control}
+					name="servise"
+					render={({ field }) => (
+						<FormControl className={styles.contactUs__field}>
+							<InputLabel>Оберіть послугу (не обов'язково)</InputLabel>
+							<Select label="Послуги" variant="standard" {...field}>
+								{selectOptions.map((option, index) => (
+									<MenuItem key={index} value={option.name}>
+										{option.name}
+									</MenuItem>
+								))}
+							</Select>
+						</FormControl>
+					)}
+				/>
+				<TextField
+					{...register('message')}
+					label="Повідомлення (не обов'язково)"
+					variant="standard"
+					multiline
+					rows={5}
+					error={errors.message && true}
+					helperText={errors.message?.message}
+					className={`${styles.contactUs__field} ${styles.contactUs__bigTxtArea}`}
+				/>
+				<MainButton type="submit">Надіслати</MainButton>
+			</form>
+		</ThemeProvider>
 	);
 }
 

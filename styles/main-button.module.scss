@@ -18,6 +18,12 @@
 		rgb(238, 190, 100) 0%,
 		rgb(218, 177, 102) 100%
 	);
+	transition: all 0.3s ease;
+
+	a {
+		color: $text-main;
+	}
+
 	&:disabled {
 		pointer-events: none;
 		color: $lighterBg;
@@ -30,12 +36,6 @@
 				display: none;
 			}
 		}
-	}
-
-	transition: all 0.3s ease;
-
-	a {
-		color: $text-main;
 	}
 	span {
 		padding: 15px 25px;
@@ -61,15 +61,6 @@
 			width: 0%;
 			height: 2px;
 		}
-		&:hover {
-			color: rgb(200, 163, 95);
-			&::before {
-				height: 100%;
-			}
-			&::after {
-				width: 100%;
-			}
-		}
 	}
 
 	&::before,
@@ -90,18 +81,31 @@
 		height: 2px;
 	}
 
-	&:hover {
-		a {
-			color: $gold;
+	@media (min-width: 769px) {
+		span {
+			&:hover {
+				color: rgb(200, 163, 95);
+				&::before {
+					height: 100%;
+				}
+				&::after {
+					width: 100%;
+				}
+			}
 		}
-		background: transparent;
-		box-shadow: none;
-		transition: all 0.5s ease;
-		&::before {
-			height: 100%;
-		}
-		&::after {
-			width: 100%;
+		&:hover {
+			a {
+				color: $gold;
+			}
+			background: transparent;
+			box-shadow: none;
+			transition: all 0.5s ease;
+			&::before {
+				height: 100%;
+			}
+			&::after {
+				width: 100%;
+			}
 		}
 	}
 }

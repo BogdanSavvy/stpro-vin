@@ -101,6 +101,12 @@ h6 {
 	flex: 1 1 auto;
 }
 
+@media (max-width: 768px) {
+	.locked {
+		overflow: hidden;
+	}
+}
+
 /* Firefox */
 * {
 	scrollbar-width: thin;
@@ -169,45 +175,4 @@ h6 {
 	height: 5px;
 	opacity: 1;
 	transition: all 0.2s ease;
-}
-
-/* MUI steper classes */
-.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active {
-	color: #c8a35f;
-}
-.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
-	color: #be964cb4;
-}
-.css-1hv8oq8-MuiStepLabel-label.Mui-active {
-	color: #ffff;
-}
-.css-1hv8oq8-MuiStepLabel-label.Mui-completed {
-	color: #ffffff8c;
-	font-weight: 500;
-}
-.css-14yr603-MuiStepContent-root {
-	margin-left: 20px;
-}
-.css-1pe7n21-MuiStepConnector-root {
-	margin-left: 20px;
-}
-
-/* MUI form classes */
-.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
-	color: #c8a35f;
-}
-.css-uhyr2s-MuiInputBase-root-MuiInput-root::after {
-	border-bottom: 2px solid #c8a35f;
-}
-.css-1eed5fa-MuiInputBase-root-MuiInput-root::after {
-	border-bottom: 2px solid #c8a35f;
-}
-.css-n70jm4-MuiInputBase-root-MuiInput-root-MuiSelect-root::after {
-	border-bottom: 2px solid #c8a35f;
-}
-.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
-	color: #c8a35f;
-}
-.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input {
-	color: #fff;
 }

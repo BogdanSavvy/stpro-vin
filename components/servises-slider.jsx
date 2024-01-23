@@ -50,7 +50,7 @@ const servises = [
 
 function ServisesSlider() {
 	return (
-		<section className={styles.page}>
+		<section className={styles.section}>
 			<Container>
 				<Swiper
 					spaceBetween={300}

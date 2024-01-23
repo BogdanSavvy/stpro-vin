@@ -18,6 +18,9 @@ function Header() {
 	const handleClick = () => {
 		setOpen(!isOpen);
 	};
+	const closeSidebar = () => {
+		setOpen(false);
+	};
 
 	const handleChange = () => {
 		if (window.scrollY >= 100) {
@@ -30,18 +33,27 @@ function Header() {
 	const handleMouseOver = () => {
 		if (!isMouseOn) setIsMouseOver(true);
 	};
+
 	const handleMouseLeave = () => {
 		if (isMouseOn) setIsMouseOver(false);
 	};
 
 	useEffect(() => {
 		const scrollDistance = window.scrollY || document.documentElement.scrollTop;
-		if (scrollDistance >= 100) {
+		if (scrollDistance !== 0) {
 			setChangeHeader(true);
 		}
 
-		window.addEventListener('scroll', handleChange);
+		window.addEventListener('scroll', handleChange, { passive: true });
 	}, []);
+
+	useEffect(() => {
+		if (isOpen) {
+			document.body.classList.add('locked');
+		} else {
+			document.body.classList.remove('locked');
+		}
+	}, [isOpen]);
 
 	return (
 		<>
@@ -88,15 +100,17 @@ function Header() {
 				</section>
 				<section>
 					<Container>
-						<div className={styles.header__bottom}>
-							<Logo />
+						<div className={styles.header__main}>
+							<Logo closeSidebar={closeSidebar} />
 							<MainNav position="header" />
 							<Burger isOpen={isOpen} onCklick={handleClick} />
 						</div>
 					</Container>
 				</section>
 			</header>
-			<Sidebar isOpen={isOpen} />
+			<Sidebar isOpen={isOpen}>
+				<MainNav closeSidebar={closeSidebar} position="sidebar" />
+			</Sidebar>
 		</>
 	);
 }

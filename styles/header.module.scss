@@ -11,7 +11,7 @@
 	&__ticker {
 	}
 
-	&__bottom {
+	&__main {
 		height: 100px;
 		width: 100%;
 		display: flex;
@@ -32,7 +32,7 @@
 	align-items: center;
 	overflow: hidden;
 	background-color: $gold;
-	
+
 	@media (max-width: 768px) {
 		width: 300%;
 	}

@@ -55,32 +55,9 @@
 	}
 }
 
-.table {
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	z-index: 2;
-	// padding: 10px 30px;
-
-	&__body {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		gap: 30px;
-	}
-
-	&__card {
-		height: 150px;
-		width: 100%;
-		padding: 15px;
-		background-color: #00000027;
-	}
-}
-
 .br {
 	display: none;
-	@media (max-width: 590.9px) {
+	@media (max-width: 850px) {
 		display: block;
 	}
 }

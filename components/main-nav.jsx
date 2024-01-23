@@ -2,12 +2,13 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 import styles from '@/styles/main-nav.module.scss';
 
-function MainNav({ position }) {
+function MainNav({ position, closeSidebar }) {
 	const pathName = usePathname();
+	const router = useRouter();
 
 	const [openAcordion, setOpenAcordion] = useState(false);
 
@@ -107,24 +108,25 @@ function MainNav({ position }) {
 							{route.links ? (
 								<div
 									onClick={handleClick}
-									className={`${styles.sidebarNav__accordion} ${
-										styles.accordion
-									} ${openAcordion ? styles.open : ''}`}
+									className={`${styles.accordion} ${
+										openAcordion ? styles.open : ''
+									}`}
 									key={route.href}
 								>
 									{route.label}
-									<span></span>
+									<span className={''}></span>
 									<ul
 										className={`${styles.accordion__list} ${
 											openAcordion ? styles.open : ''
 										}`}
 									>
 										{route.links.map(link => (
-											<li
-												className={styles.accordion__item}
-												key={link.href}
-											>
-												<Link href={link.href}>{link.label}</Link>
+											<li className={`${styles.accordion__item} ${
+												openAcordion ? styles.open : ''
+											}`} key={link.href}>
+												<Link onClick={closeSidebar} href={link.href}>
+													{link.label}
+												</Link>
 											</li>
 										))}
 									</ul>
@@ -132,6 +134,7 @@ function MainNav({ position }) {
 							) : (
 								<span className={styles.sidebarNav__item} key={route.href}>
 									<Link
+										onClick={closeSidebar}
 										href={route.href}
 										className={route.isActive ? styles.activeLink : ''}
 									>

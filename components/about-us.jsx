@@ -54,7 +54,10 @@ function AboutUs() {
 							/>
 						</figure>
 						<div className={styles.aboutUs__gridChild}>
-							50k+ <br /> <span>м2</span>
+							50K+ <br />
+							<span>
+								м<sup>2</sup>
+							</span>
 						</div>
 					</div>
 				</div>

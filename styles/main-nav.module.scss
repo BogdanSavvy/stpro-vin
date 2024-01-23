@@ -160,52 +160,64 @@
 	overflow: hidden;
 	max-height: 50px;
 	transition: all 0.4s ease;
-	&.open {
-		transition: all 0.4s ease;
-		max-height: 250px;
-	}
 
 	span {
 		position: relative;
-
 		&::before,
-		::after {
-			transform: translateY(-50%);
-			background-color: $gold;
-		}
-		&::before {
-			content: '';
-			position: absolute;
-			top: 40%;
-			left: 10px;
-			height: 2px;
-			width: 10px;
-			background-color: $gold;
-			transform: rotate(-45deg);
-		}
 		&::after {
 			content: '';
 			position: absolute;
-			top: 40%;
-			right: -14px;
-			height: 2px;
-			width: 10px;
+			top: 45%;
+			transform: translateY(-50%, -50%);
 			background-color: $gold;
-			transform: rotate(45deg);
+			transition: all 0.3s ease;
+		}
+		&::before {
+			left: 20px;
+			height: 3px;
+			width: 20px;
+			background-color: $gold;
+			transform: rotate(90deg);
+		}
+		&::after {
+			right: -40px;
+			height: 3px;
+			width: 20px;
+			background-color: $gold;
 		}
 	}
 	&__list {
 		display: none;
+		height: 0%;
 		flex-direction: column;
 		padding-top: 20px;
 		row-gap: 25px;
 		transition: all 0.4s ease;
-		&.open {
-			display: flex;
-			transition: all 0.4s ease;
-		}
 	}
 	&__item {
+		scale: 0;
+	}
+}
+
+.open {
+	&.accordion {
+		max-height: 250px;
+		span {
+			transition: all 0.3s ease;
+			&::before {
+				transform: rotate(0deg);
+			}
+		}
+		&__list {
+			display: flex;
+			scale: 1;
+			height: 100%;
+			max-height: 250px;
+			transition: all 0.4s ease;
+		}
+		&__item {
+			scale: 1;
+		}
 	}
 }
 

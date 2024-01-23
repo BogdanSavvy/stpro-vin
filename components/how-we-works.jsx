@@ -5,6 +5,7 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import StepContent from '@mui/material/StepContent';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import styles from '@/styles/how-we-works.module.scss';
 import Container from '@/components/ui/container';
@@ -59,41 +60,72 @@ function HowWeWorks() {
 		setActiveStep(prevActiveStep => prevActiveStep - 1);
 	};
 
+	const theme = createTheme({
+		palette: {
+			primary: {
+				main: '#C8A35F',
+				dark: '#000',
+				contrastText: '#ffff',
+			},
+			text: {
+				primary: '#fff',
+			},
+		},
+		components: {
+			MuiStepContent: {
+				styleOverrides: {
+					root: {
+						marginLeft: '20px',
+					},
+				},
+			},
+			MuiStepConnector: {
+				styleOverrides: {
+					root: {
+						marginLeft: '20px',
+					},
+				},
+			},
+		},
+	});
+
 	return (
-		<section className={styles.howWeWorks}>
-			<Container>
-				<div className={styles.content}>
-					<Heading>Як ми працюємо</Heading>
-					<Stepper activeStep={activeStep} orientation="vertical">
-						{steps.map((step, index) => (
-							<Step key={step.label}>
-								<article className={styles.howWeWorks__step}>
-									<StepLabel className={styles.howWeWorks__stepLabel}>
-										{step.label}
-									</StepLabel>
-									<StepContent className={styles.howWeWorks__stepContent}>
-										<p className={styles.howWeWorks__text}>
-											{step.description}
-										</p>
-										<div className={styles.howWeWorks__stepActions}>
-											<MainButton clickEvent={handleNext}>
-												{index === steps.length - 1 ? 'Кінець' : 'Далі'}
-											</MainButton>
-											<SecondaryButton
-												disabled={index === 0}
-												clickEvent={handleBack}
-											>
-												Попередній
-											</SecondaryButton>
-										</div>
-									</StepContent>
-								</article>
-							</Step>
-						))}
-					</Stepper>
-				</div>
-			</Container>
-		</section>
+		<ThemeProvider theme={theme}>
+			<section className={styles.howWeWorks}>
+				<Container>
+					<div className={styles.content}>
+						<Heading>Як ми працюємо</Heading>
+						<Stepper activeStep={activeStep} orientation="vertical">
+							{steps.map((step, index) => (
+								<Step key={step.label}>
+									<article className={styles.howWeWorks__step}>
+										<StepLabel className={styles.howWeWorks__stepLabel}>
+											{step.label}
+										</StepLabel>
+										<StepContent className={styles.howWeWorks__stepContent}>
+											<p className={styles.howWeWorks__text}>
+												{step.description}
+											</p>
+											<div className={styles.howWeWorks__stepActions}>
+												<MainButton clickEvent={handleNext}>
+													{index === steps.length - 1 ? 'Кінець' : 'Далі'}
+												</MainButton>
+												<SecondaryButton
+													disabled={index === 0}
+													clickEvent={handleBack}
+												>
+													Попередній
+												</SecondaryButton>
+											</div>
+										</StepContent>
+									</article>
+								</Step>
+							))}
+						</Stepper>
+					</div>
+				</Container>
+			</section>
+		</ThemeProvider>
 	);
 }
 
