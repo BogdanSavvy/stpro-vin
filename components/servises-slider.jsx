@@ -57,18 +57,18 @@ function ServisesSlider() {
 			className={styles.section}
 		>
 			<Container>
-				<Swiper
-					spaceBetween={300}
-					slidesPerView={1}
-					modules={[Navigation, Pagination]}
-					loop={true}
-					pagination={{
-						clickable: false,
-					}}
-					navigation={true}
-				>
-					{servises.map((servise, index) => (
-						<AnimatePresence>
+				<AnimatePresence>
+					<Swiper
+						spaceBetween={300}
+						slidesPerView={1}
+						modules={[Navigation, Pagination]}
+						loop={true}
+						pagination={{
+							clickable: false,
+						}}
+						navigation={true}
+					>
+						{servises.map((servise, index) => (
 							<SwiperSlide key={index}>
 								{({ isActive }) => (
 									<article className={styles.slide}>
@@ -104,10 +104,10 @@ function ServisesSlider() {
 									</article>
 								)}
 							</SwiperSlide>
-						</AnimatePresence>
-					))}
-					<SwiperNavButtons />
-				</Swiper>
+						))}
+						<SwiperNavButtons />
+					</Swiper>
+				</AnimatePresence>
 			</Container>
 		</motion.section>
 	);
