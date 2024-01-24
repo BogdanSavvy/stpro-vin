@@ -1,15 +1,26 @@
+'use client';
+
+import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import styles from '@/styles/contacts-banner.module.scss';
 import MainButton from '@/components/ui/main-button';
-import Link from 'next/link';
+import { sectionAnimation, bannerAnimation } from '@/lib/motion-animations';
 
 function ContactsBanner() {
 	return (
-		<section className={styles.banner}>
-			<div className={styles.banner__text}>
+		<motion.section
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ amount: 0.4, once: true }}
+			variants={sectionAnimation}
+			className={styles.banner}
+		>
+			<motion.div variants={bannerAnimation} className={styles.banner__text}>
 				<p>
-					Не відкладай на завтре те, що можна зробити <span>прямо зараз!</span>
+					Готові втілити ваші ідеї в реальність? Звертайтеся до нас вже{' '}
+					<span>зараз!</span>
 				</p>
 				<p>
 					Зв'яжись з нами сьогодні та отримай <span>безкоштовну</span>{' '}
@@ -18,9 +29,9 @@ function ContactsBanner() {
 				<MainButton>
 					<Link href="/contacts">Зв'язатись</Link>
 				</MainButton>
-			</div>
+			</motion.div>
 			<Image fill src="/stajka_2.jpg" alt="styazhka_banner" sizes="100%" />
-		</section>
+		</motion.section>
 	);
 }
 

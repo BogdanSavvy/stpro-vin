@@ -2,7 +2,7 @@
 
 .contactUs {
 	padding: 120px 0 100px 0;
-
+	overflow: hidden;
 	background-color: $lighterBg;
 
 	@media (max-width: 1024px) {
@@ -32,7 +32,11 @@
 		flex-direction: column;
 		gap: 15px;
 		p {
-			line-height: 155%;
+			font-size: 18px;
+			line-height: 175%;
+			@media (max-width: 768px) {
+				font-size: 16px;
+			}
 		}
 	}
 	&__form {

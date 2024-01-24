@@ -1,65 +1,87 @@
-import styles from '@/styles/contact-us.module.scss';
-import Container from '@/components/ui/container';
-import Heading from '@/components/ui/heading';
-import ContactUsForm from '@/components/contact-us-form';
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+import styles from '@/styles/contact-us.module.scss';
+import Container from '@/components/ui/container';
+import { MHeading } from '@/components/ui/heading';
+import ContactUsForm from '@/components/contact-us-form';
+import { sectionAnimation, textAnimation } from '@/lib/motion-animations';
 
 function ContatUs() {
 	return (
-		<section className={styles.contactUs}>
+		<motion.section
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ amount: 0.4, once: true }}
+			variants={sectionAnimation}
+			className={styles.contactUs}
+		>
 			<Container>
 				<div className={styles.contactUs__container}>
 					<article className={styles.contactUs__details}>
 						<section className={styles.contactUs__text}>
-							<Heading>Замовити консультацію</Heading>
-							<p>
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-								Delectus, repellendus iste! Distinctio hic, dolores repellat
-								tenetur quae iste! Ullam architecto natus autem corrupti sunt
-								magni suscipit minima ea, accusamus nam!
-							</p>
-							<p>
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-								Delectus, repellendus iste! Distinctio hic, dolores repellat
-								tenetur quae iste! Ullam architecto natus autem corrupti sunt
-								magni suscipit minima ea, accusamus nam!
-							</p>
+							<MHeading variants={textAnimation}>
+								Замовити консультацію
+							</MHeading>
+							<motion.p custom={1} variants={textAnimation}>
+								Ми завжди готові допомогти вам з ваший будівельним проектом!
+								Заповніть форму нижче, і наші експерти зв'яжуться з вами
+								найближчим часом, щоб надати детальну консультацію.
+							</motion.p>
+							<motion.p custom={1} variants={textAnimation}>
+								Не вагайтеся звертатися до нас з будь-якими питаннями або для
+								отримання додаткової інформації. Наша команда готова надати вам
+								кваліфіковану підтримку та забезпечити успішну реалізацію вашого
+								будівельного проекту.
+							</motion.p>
 						</section>
 						<section className={styles.contactUs__cards}>
-							<article className={styles.card}>
+							<motion.article
+								custom={2}
+								variants={textAnimation}
+								className={styles.card}
+							>
 								<figure className={styles.card__figure}>
 									<Image
-										width={70}
-										height={70}
+										width={60}
+										height={60}
 										src="/phone.png"
 										alt="phone_png"
 									/>
 								</figure>
 								<div className={styles.card__contacts}>
-									<Link href="tel:+380930582222">+38 (093) 058 2222</Link>
+									<Link href="tel:+380937330167">+38 (093) 733 0167</Link>
 									<Link href="tel:+380930582222">+38 (093) 058 2222</Link>
 								</div>
-							</article>
-							<article className={styles.card}>
+							</motion.article>
+							<motion.article
+								custom={3}
+								variants={textAnimation}
+								className={styles.card}
+							>
 								<figure className={styles.card__figure}>
 									<Image
-										width={70}
-										height={70}
+										width={60}
+										height={60}
 										src="/email.png"
 										alt="email_png"
 									/>
 								</figure>
 								<div className={styles.card__contacts}>
-									<Link href="mailto:example@mail.com">example@mail.com</Link>
+									<Link href="mailto:Styazhkaprovin@gmail.com">
+										Styazhkaprovin@gmail.com
+									</Link>
 								</div>
-							</article>
+							</motion.article>
 						</section>
 					</article>
 					<ContactUsForm />
 				</div>
 			</Container>
-		</section>
+		</motion.section>
 	);
 }
 

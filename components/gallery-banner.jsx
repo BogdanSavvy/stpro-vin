@@ -1,19 +1,35 @@
 'use client';
 
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Keyboard, EffectCoverflow } from 'swiper/modules';
 import 'swiper/scss';
 
 import styles from '@/styles/gallery-banner.module.scss';
 import Container from '@/components/ui/container';
+import {
+	sectionAnimation,
+	sliderAnimation,
+	textAnimation,
+} from '@/lib/motion-animations';
+
 
 function GalleryBanner() {
 	return (
-		<section className={styles.galleryBanner}>
+		<motion.section
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ amount: 0.4, once: true }}
+			variants={sectionAnimation}
+			className={styles.galleryBanner}
+		>
 			<Container>
-				<h3>Наші роботи</h3>
-				<div className={styles.galleryBanner__slider}>
+				<motion.h3 variants={textAnimation}>Наші роботи</motion.h3>
+				<motion.div
+					variants={sliderAnimation}
+					className={styles.galleryBanner__slider}
+				>
 					<Swiper
 						effect={'coverflow'}
 						coverflowEffect={{
@@ -121,9 +137,9 @@ function GalleryBanner() {
 							</div>
 						</SwiperSlide>
 					</Swiper>
-				</div>
+				</motion.div>
 			</Container>
-		</section>
+		</motion.section>
 	);
 }
 

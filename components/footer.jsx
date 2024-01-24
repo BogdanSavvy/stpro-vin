@@ -12,11 +12,11 @@ function Footer() {
 							<div className={styles.top__company}>
 								<Logo />
 								<p className={styles.top__details}>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Praesentium est vel accusantium molestias voluptas modi
-									voluptatibus? Quis accusamus necessitatibus culpa. Quia
-									impedit totam adipisci expedita vitae explicabo nam repellat
-									maxime?
+									Ваш партнер у сфері якісного будівництва. За вашим комфортом
+									та надійністю - крок за кроком з нами. Наша місія -
+									перетворити ваші ідеї в реальність, надаючи високоякісні
+									будівельні рішення. Обирайте STPRO-VIN - будуйте разом із
+									впевненістю у майбутнє.
 								</p>
 							</div>
 							<nav className={styles.top__navigation}>
@@ -47,7 +47,7 @@ function Footer() {
 					<span className={styles.foooter__separator}></span>
 					<div className={styles.footer__bottom}>
 						<div className={styles.footer__copyright}>
-							2024 © ST-PROVIN. Всі права захищені.
+							2024 © STPRO-VIN. Всі права захищені.
 						</div>
 						<div className={styles.footer__socials}>
 							<div>tel</div>

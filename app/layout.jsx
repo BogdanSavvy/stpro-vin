@@ -3,6 +3,7 @@ import './globals.css';
 
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import ScrollTopButton from '@/components/ui/scroll-top-button';
 
 const montserrat = Montserrat({
 	subsets: ['latin'],
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
 					<main className="content">{children}</main>
 					<Footer />
 				</div>
+				<ScrollTopButton />
 			</body>
 		</html>
 	);

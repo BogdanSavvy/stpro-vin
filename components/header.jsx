@@ -72,13 +72,15 @@ function Header() {
 					>
 						<p>м.Вінниця</p>
 						<p>
-							<Link href="tel:+380930002222">Номер телефону 1</Link>
+							<Link href="tel:+380937330167">+38 (093) 733 0167</Link>
 						</p>
 						<p>
 							<Link href="tel:+380930002222">Номер телефону 2</Link>
 						</p>
 						<p>
-							<Link href="mailto:exmple@mail.com">exmple@mail.com</Link>
+							<Link href="mailto:Styazhkaprovin@gmail.com">
+								Styazhkaprovin@gmail.com
+							</Link>
 						</p>
 					</div>
 					<div
@@ -88,13 +90,15 @@ function Header() {
 					>
 						<p>м.Вінниця</p>
 						<p>
-							<Link href="tel:+380930002222">Номер телефону 1</Link>
+							<Link href="tel:+380937330167">+38 (093) 733 0167</Link>
 						</p>
 						<p>
 							<Link href="tel:+380930002222">Номер телефону 2</Link>
 						</p>
 						<p>
-							<Link href="mailto:exmple@mail.com">exmple@mail.com</Link>
+							<Link href="mailto:Styazhkaprovin@gmail.com">
+								Styazhkaprovin@gmail.com
+							</Link>
 						</p>
 					</div>
 				</section>

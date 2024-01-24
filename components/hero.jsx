@@ -1,29 +1,41 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import styles from '@/styles/hero.module.scss';
-import Container from './ui/container';
+import Container from '@/components/ui/container';
+import { textAnimation, heroFrameAnimation } from '@/lib/motion-animations';
 
 function Hero({ imageUrl }) {
 	return (
 		<section className={styles.hero}>
 			<Container>
-				<article className={styles.greetings}>
-					<h1 className={styles.greetings__title}>
+				<motion.article
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ once: true }}
+					variants={heroFrameAnimation}
+					className={styles.greetings}
+				>
+					<motion.h1
+						variants={textAnimation}
+						custom={1}
+						className={styles.greetings__title}
+					>
 						Вас вітає <br className={styles.br} /> STPRO-VIN
-					</h1>
-					<p className={styles.greetings__description}>
-						Ідеально рівні підлоги та стіни під ключ у Вінниці
-					</p>
-				</article>
+					</motion.h1>
+					<motion.p
+						variants={textAnimation}
+						custom={2}
+						className={styles.greetings__description}
+					>
+						"Ваша Майстерня Якісного Будівництва – Творимо Комфорт і Інновації
+						Разом!"
+					</motion.p>
+				</motion.article>
 			</Container>
-			{/* <article className={styles.table}>
-				<div className={styles.table__body}>
-					<div className={styles.table__card}>ЧАСИ РОБОТИ</div>
-					<div className={styles.table__card}>НОМЕРА ТЕЛЕФОНУ</div>
-					<div className={styles.table__card}>МІСЦЕ РОБОТИ</div>
-				</div>
-			</article> */}
-			<Image fill src={imageUrl} alt="Hero poster" sizes="100%" />
+			<Image fill priority src={imageUrl} alt="Hero poster" sizes="100%" />
 		</section>
 	);
 }

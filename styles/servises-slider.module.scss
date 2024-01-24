@@ -2,6 +2,7 @@
 
 .section {
 	position: relative;
+	overflow: hidden;
 	padding: 120px 0 100px 0;
 
 	@media (max-width: 1024px) {
@@ -62,7 +63,7 @@
 		font-size: 18px;
 		font-style: normal;
 		font-weight: 400;
-		line-height: 158.203%; /* 28.477px */
+		line-height: 178.203%; /* 28.477px */
 		flex: 1 1 auto;
 		@media (max-width: 1023.9px) {
 			font-size: 16px;

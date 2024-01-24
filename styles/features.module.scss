@@ -1,6 +1,7 @@
 @import './assets/colors.scss';
 
 .features {
+	overflow: hidden;
 	padding: 120px 0 100px 0;
 
 	@media (max-width: 1024px) {
@@ -29,8 +30,8 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 20px;
-		height: 200px;
-		padding: 15px;
+		height: 230px;
+		padding: 10px;
 		background-color: $lighterBg;
 
 		@media (min-width: 768.9px) {
@@ -120,6 +121,9 @@
 		font-size: 18px;
 		line-height: 155%;
 		text-align: center;
+		@media (max-width: 768px) {
+			font-size: 16px;
+		}
 		@media (max-width: 424.9px) {
 			font-size: 16px;
 		}

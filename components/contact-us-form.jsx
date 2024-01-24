@@ -16,7 +16,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import styles from '@/styles/contact-us.module.scss';
 import MainButton from '@/components/ui/main-button';
 import { sendOrderAction } from '@/action/sendOrderAction';
-import { red } from '@mui/material/colors';
 
 function ContactUsForm() {
 	const phoneRegExp =

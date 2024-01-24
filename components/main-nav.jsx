@@ -2,13 +2,12 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 import styles from '@/styles/main-nav.module.scss';
 
 function MainNav({ position, closeSidebar }) {
 	const pathName = usePathname();
-	const router = useRouter();
 
 	const [openAcordion, setOpenAcordion] = useState(false);
 
@@ -121,9 +120,12 @@ function MainNav({ position, closeSidebar }) {
 										}`}
 									>
 										{route.links.map(link => (
-											<li className={`${styles.accordion__item} ${
-												openAcordion ? styles.open : ''
-											}`} key={link.href}>
+											<li
+												className={`${styles.accordion__item} ${
+													openAcordion ? styles.open : ''
+												}`}
+												key={link.href}
+											>
 												<Link onClick={closeSidebar} href={link.href}>
 													{link.label}
 												</Link>

@@ -1,38 +1,62 @@
 'use client';
 
-import Container from '@/components/ui/container';
-import styles from '@/styles/about-us.module.scss';
-import Heading from './ui/heading';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+
+import styles from '@/styles/about-us.module.scss';
+import Container from '@/components/ui/container';
+import { MHeading } from '@/components/ui/heading';
+import {
+	sectionAnimation,
+	textAnimation,
+	achivmentsAnimation,
+} from '@/lib/motion-animations';
 
 function AboutUs() {
 	return (
-		<section className={styles.aboutUs}>
+		<motion.section
+			initial="hidden"
+			whileInView="visible"
+			viewport={{ amount: 0.4, once: true }}
+			variants={sectionAnimation}
+			className={styles.aboutUs}
+		>
 			<Container>
-				<Heading>Про нас</Heading>
+				<MHeading custom={1} variants={textAnimation}>
+					Про нас
+				</MHeading>
 				<div className={styles.aboutUs__body}>
-					<div className={styles.aboutUs__details}>
+					<motion.div
+						custom={2}
+						variants={textAnimation}
+						className={styles.aboutUs__details}
+					>
 						<p className={styles.aboutUs__description}>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-							Exercitationem fuga provident esse! Dolores reiciendis
-							perspiciatis pariatur atque, magnam laborum. Suscipit asperiores
-							obcaecati iste maxime eveniet porro placeat doloribus, dolor
-							doloremque. Eius vero sed sunt adipisci! Labore tempora maiores
-							necessitatibus velit.
+							"STPRO-VIN" - це більше, ніж просто будівельна компанія; ми - ваш
+							надійний партнер у сфері створення комфортних та міцних просторів.
+							З 6-річним досвідом у будівельній справі, ми пропонуємо
+							високоякісні послуги, включаючи машинну напівсуху стяжку,
+							інноваційну покрівлю методом розуклонів та машинну штукатурку
+							стін.
 						</p>
 						<p className={styles.aboutUs__description}>
-							Corporis repudiandae vitae, porro corrupti alias ipsam temporibus
-							at delectus voluptatum, et harum doloribus? Magnam dolorem velit
-							nobis fugiat necessitatibus? Exercitationem Lorem ipsum dolor sit
-							amet consectetur adipisicing elit. Nostrum molestiae, voluptatibus
-							pariatur ab soluta perspiciatis rem iure eveniet. Nihil magni
-							obcaecati quidem sequi modi voluptatum nulla animi consequatur id
-							at?
+							Наша місія - перевершувати очікування клієнтів, забезпечуючи не
+							лише бездоганну якість робіт, але і персоналізований підхід до
+							кожного завдання. Ми дбаємо про кожну деталь, працюючи з
+							інноваційними технологіями та враховуючи ваші унікальні потреби.
 						</p>
-					</div>
-					<div className={styles.aboutUs__grid}>
+						<p className={styles.aboutUs__description}>
+							Обирайте "STPRO-VIN" для надійних та ефективних будівельних
+							рішень, які перетворять ваші ідеї в реальність.
+						</p>
+					</motion.div>
+					<motion.div
+						custom={2}
+						variants={achivmentsAnimation}
+						className={styles.aboutUs__grid}
+					>
 						<div className={styles.aboutUs__gridChild}>
-							10+ <br /> <span>років</span>
+							6+ <br /> <span>років</span>
 						</div>
 						<div className={styles.aboutUs__gridChild}>
 							500+ <br /> <span>клієнтів</span>
@@ -59,10 +83,10 @@ function AboutUs() {
 								м<sup>2</sup>
 							</span>
 						</div>
-					</div>
+					</motion.div>
 				</div>
 			</Container>
-		</section>
+		</motion.section>
 	);
 }
 

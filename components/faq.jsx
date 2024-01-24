@@ -5,10 +5,12 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { motion } from 'framer-motion';
 
 import styles from '@/styles/faq.module.scss';
 import Container from '@/components/ui/container';
-import Heading from '@/components/ui/heading';
+import { MHeading } from '@/components/ui/heading';
+import { sectionAnimation, textAnimation } from '@/lib/motion-animations';
 
 const faqs = [
 	{
@@ -121,17 +123,24 @@ export default function FAQ() {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<section className={styles.faq}>
+			<motion.section
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ amount: 0.4, once: true }}
+				variants={sectionAnimation}
+				className={styles.faq}
+			>
 				<Container>
-					<Heading>Питання & відповіді</Heading>
+					<MHeading custom={1} variants={textAnimation}>
+						Питання & відповіді
+					</MHeading>
+
 					{faqs.map((faq, index) => (
 						<Accordion key={index} className={styles.faq__acordion}>
 							<AccordionSummary
 								expandIcon={
 									<ExpandMoreIcon className={styles.faq__expandIcon} />
 								}
-								//aria-controls="panel1-content"
-								//id="panel1-header"
 								className={styles.faq__summary}
 							>
 								<h4>{faq.label}</h4>
@@ -144,7 +153,7 @@ export default function FAQ() {
 						</Accordion>
 					))}
 				</Container>
-			</section>
+			</motion.section>
 		</ThemeProvider>
 	);
 }
