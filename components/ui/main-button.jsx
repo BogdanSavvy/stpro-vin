@@ -21,7 +21,10 @@ const MainButton = forwardRef(
 		);
 	},
 );
+MainButton.displayName = 'MainButton';
 
 export const MMainButton = motion(MainButton);
+
+MMainButton.displayName = 'MMainButton';
 
 export default MainButton;

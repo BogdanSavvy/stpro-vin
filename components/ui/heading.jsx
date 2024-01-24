@@ -13,6 +13,10 @@ const Heading = forwardRef(({ children }, ref) => {
 	);
 });
 
+Heading.displayName = 'Heading';
+
 export const MHeading = motion(Heading);
+
+MHeading.displayName = 'MHeading';
 
 export default Heading;
