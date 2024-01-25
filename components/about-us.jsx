@@ -34,7 +34,7 @@ function AboutUs() {
 						<p className={styles.aboutUs__description}>
 							"STPRO-VIN" - це більше, ніж просто будівельна компанія; ми - ваш
 							надійний партнер у сфері створення комфортних та міцних просторів.
-							З 6-річним досвідом у будівельній справі, ми пропонуємо
+							З 9-річним досвідом у будівельній справі, ми пропонуємо
 							високоякісні послуги, включаючи машинну напівсуху стяжку,
 							інноваційну покрівлю методом розуклонів та машинну штукатурку
 							стін.
@@ -56,10 +56,10 @@ function AboutUs() {
 						className={styles.aboutUs__grid}
 					>
 						<div className={styles.aboutUs__gridChild}>
-							6+ <br /> <span>років</span>
+							9+ <br /> <span>років</span>
 						</div>
 						<div className={styles.aboutUs__gridChild}>
-							500+ <br /> <span>клієнтів</span>
+							1500+ <br /> <span>клієнтів</span>
 						</div>
 						<figure className={styles.aboutUs__gridChild}>
 							<Image

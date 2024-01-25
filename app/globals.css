@@ -108,6 +108,10 @@ h6 {
 	}
 }
 
+.hiden {
+	display: none;
+}
+
 /* Firefox */
 * {
 	scrollbar-width: thin;
