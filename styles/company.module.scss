@@ -1,0 +1,43 @@
+@import './assets/colors.scss';
+
+.company {
+	overflow: hidden;
+	position: relative;
+	padding: 100px 0 100px 0;
+
+	@media (max-width: 1024px) {
+		padding: 100px 0 80px 0;
+	}
+	@media (max-width: 768px) {
+		padding: 80px 0 0 0;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 30%;
+		height: 150%;
+		transform: rotate(-30deg);
+		background-color: $lighterBg;
+		@media (max-width: 768px) {
+			width: 45%;
+			transform: rotate(-35deg);
+		}
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		right: 0;
+		top: -100%;
+		width: 30%;
+		height: 220%;
+		transform: rotate(30deg);
+		background-color: $lighterBg;
+		@media (max-width: 768px) {
+			width: 45%;
+			transform: rotate(35deg);
+		}
+	}
+}

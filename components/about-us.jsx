@@ -26,7 +26,7 @@ function AboutUs() {
 					Про нас
 				</MHeading>
 				<div className={styles.aboutUs__body}>
-					<motion.div
+					<motion.article
 						custom={2}
 						variants={textAnimation}
 						className={styles.aboutUs__details}
@@ -49,7 +49,7 @@ function AboutUs() {
 							Обирайте "STPRO-VIN" для надійних та ефективних будівельних
 							рішень, які перетворять ваші ідеї в реальність.
 						</p>
-					</motion.div>
+					</motion.article>
 					<motion.div
 						custom={2}
 						variants={achivmentsAnimation}

@@ -45,7 +45,7 @@ const servises = [
 		Ми прагнемо до ідеальності в кожній деталі, надаючи вам не лише надійний дах, 
 		але і естетично виглядний елемент вашої будівлі. `,
 		price: '260',
-		image: '/screed-machine.png',
+		image: '/zatir_mach_2.png',
 		href: '/servises/roofing',
 	},
 ];
@@ -107,7 +107,9 @@ function ServisesSlider() {
 												{...swiperFadeAnimation(isActive, 3)}
 												className={styles.slide__price}
 											>
-												{servise.price} грн/м<sup>2</sup>
+												<div className={styles.slide__priceTag}>
+													{servise.price} грн/м<sup>2</sup>
+												</div>
 											</motion.figcaption>
 										</motion.figure>
 									</article>

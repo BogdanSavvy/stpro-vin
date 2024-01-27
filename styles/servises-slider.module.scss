@@ -84,4 +84,50 @@
 			object-fit: contain;
 		}
 	}
+	&__price {
+		position: absolute;
+		left: 5%;
+		bottom: 20%;
+		color: $dark;
+		font-size: 32px;
+		font-weight: 600;
+		display: inline;
+		@media (max-width: 425px) {
+			right: -100%;
+			bottom: 0;
+			scale: 0.6;
+		}
+	}
+	&__priceTag {
+		width: 250px;
+		height: 60px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $gold;
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			left: 0;
+			bottom: 0;
+			width: 0;
+			height: 0;
+			border-left: 20px solid $dark;
+			border-top: 30px solid transparent;
+			border-bottom: 30px solid transparent;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			right: -40px;
+			bottom: 0;
+			width: 0;
+			height: 0;
+			border-left: 40px solid $gold;
+			border-top: 30px solid transparent;
+			border-bottom: 30px solid transparent;
+		}
+	}
 }

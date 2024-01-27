@@ -1,4 +1,4 @@
-import SSRHero from '@/components/server/ssr-hero';
+import Hero from '@/components/hero';
 import AboutUs from '@/components/about-us';
 import ServisesSlider from '@/components/servises-slider';
 import FAQ from '@/components/faq';
@@ -12,7 +12,7 @@ import GalleryBanner from '@/components/gallery-banner';
 function Home() {
 	return (
 		<>
-			<SSRHero imageUrl="/hero.jpg" />
+			<Hero imageUrl="/hero.jpg" />
 			<ServisesSlider />
 			<AboutUs />
 			<ContactsBanner />
