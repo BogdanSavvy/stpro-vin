@@ -14,7 +14,6 @@ import {
 	textAnimation,
 } from '@/lib/motion-animations';
 
-
 function GalleryBanner() {
 	return (
 		<motion.section

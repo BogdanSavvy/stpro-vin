@@ -1,3 +1,8 @@
+import Link from 'next/link';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+
 import styles from '@/styles/footer.module.scss';
 import Container from '@/components/ui/container';
 import Logo from '@/components/ui/logo';
@@ -21,26 +26,36 @@ function Footer() {
 							</div>
 							<nav className={styles.top__navigation}>
 								<ul className={styles.top__list}>
-									<h4 className={styles.top__listHeading}>Heading</h4>
-									<li className={styles.top__link}>some Link</li>
-									<li className={styles.top__link}>some Link</li>
-									<li className={styles.top__link}>some Link</li>
-									<li className={styles.top__link}>some Link</li>
+									<h4 className={styles.top__listHeading}>КОМПАНІЯ</h4>
+									<li className={styles.top__link}>
+										<Link href="/about">Про нас</Link>
+									</li>
+									<li className={styles.top__link}>
+										<Link href="/gallery">Портфоліо</Link>
+									</li>
+									<li className={styles.top__link}>
+										<Link href="/contacts">Зв'язатись з нами</Link>
+									</li>
 								</ul>
 								<ul className={styles.top__list}>
+									<h4 className={styles.top__listHeading}>ПОСЛУГИ</h4>
+									<li className={styles.top__link}>
+										<Link href="/servises/screed">Напівсуха стяжка</Link>
+									</li>
+									<li className={styles.top__link}>
+										<Link href="/servises/plaster">Машинна штукатурка</Link>
+									</li>
+									<li className={styles.top__link}>
+										<Link href="/servises/roofing">Покрівля</Link>
+									</li>
+								</ul>
+								{/* <ul className={styles.top__list}>
 									<h4 className={styles.top__listHeading}>Heading</h4>
 									<li className={styles.top__link}>some Link</li>
 									<li className={styles.top__link}>some Link</li>
 									<li className={styles.top__link}>some Link</li>
 									<li className={styles.top__link}>some Link</li>
-								</ul>
-								<ul className={styles.top__list}>
-									<h4 className={styles.top__listHeading}>Heading</h4>
-									<li className={styles.top__link}>some Link</li>
-									<li className={styles.top__link}>some Link</li>
-									<li className={styles.top__link}>some Link</li>
-									<li className={styles.top__link}>some Link</li>
-								</ul>
+								</ul> */}
 							</nav>
 						</div>
 					</div>
@@ -49,11 +64,23 @@ function Footer() {
 						<div className={styles.footer__copyright}>
 							2024 © STPRO-VIN. Всі права захищені.
 						</div>
-						<div className={styles.footer__socials}>
-							<div>tel</div>
-							<div>vib</div>
-							<div>face</div>
-						</div>
+						<ul className={styles.footer__socials}>
+							<li>
+								<Link href="/">
+									<TelegramIcon />
+								</Link>
+							</li>
+							<li>
+								<Link href="/">
+									<WhatsAppIcon />
+								</Link>
+							</li>
+							<li>
+								<Link href="/">
+									<FacebookIcon />
+								</Link>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</Container>

@@ -1,8 +1,8 @@
 import Company from '@/components/company';
 import ContactsBanner from '@/components/contacts-banner';
-import Features from '@/components/features';
 import GalleryBanner from '@/components/gallery-banner';
 import MiniHero from '@/components/mini-hero';
+import Quote from '@/components/quote';
 import WhyWe from '@/components/why-we';
 
 function AboutPage() {
@@ -17,6 +17,9 @@ function AboutPage() {
 			<GalleryBanner />
 			<WhyWe />
 			<ContactsBanner />
+			<Quote style={{paddingTop: '80px'}} autor="Генрі Форд" image="/hero_4.jpg">
+				Якість – це <span>відсутність необхідності</span> робити щось знову
+			</Quote>
 		</>
 	);
 }
