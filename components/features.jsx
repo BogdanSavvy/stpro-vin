@@ -43,16 +43,14 @@ const cards = [
 
 function Features() {
 	return (
-		<section className={styles.features}>
+		<motion.section
+			initial="hidden"
+			whileInView={'visible'}
+			viewport={{ amount: 0.3, once: true }}
+			className={styles.features}
+		>
 			<Container>
-				<MHeading
-					initial="hidden"
-					whileInView={'visible'}
-					viewport={{ amount: 0.3, once: true }}
-					variants={textAnimation}
-				>
-					Ми гарантуємо
-				</MHeading>
+				<MHeading variants={textAnimation}>Ми гарантуємо</MHeading>
 				<motion.div
 					initial="hidden"
 					whileInView={'visible'}
@@ -84,7 +82,7 @@ function Features() {
 					))}
 				</motion.div>
 			</Container>
-		</section>
+		</motion.section>
 	);
 }
 

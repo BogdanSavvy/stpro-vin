@@ -3,24 +3,19 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-import Heading from '@/components/ui/heading';
+import { MHeading } from '@/components/ui/heading';
 import styles from '@/styles/detail.module.scss';
-import {
-	sectionAnimation,
-	textAnimation,
-	cardAnimation,
-} from '@/lib/motion-animations';
+import { textAnimation, cardAnimation } from '@/lib/motion-animations';
 
 function Detail({ children, heading, image, reversed }) {
 	return (
 		<motion.article
 			initial="hidden"
 			whileInView="visible"
-			variants={sectionAnimation}
 			viewport={{ amount: 0.3, once: true }}
 			className={styles.detail}
 		>
-			<Heading>{heading}</Heading>
+			<MHeading variants={textAnimation}>{heading}</MHeading>
 			<div
 				className={`${
 					!reversed ? styles.detail__body : styles.detail__bodyReversed

@@ -1,7 +1,7 @@
+import Gallery from '@/components/gallery';
 import MiniHero from '@/components/mini-hero';
-import React from 'react';
 
-function Gallery() {
+function Portfolio() {
 	return (
 		<>
 			<MiniHero
@@ -9,8 +9,9 @@ function Gallery() {
 				description="Ми - ваш надійний партнер у сфері створення комфортних та міцних просторів."
 				image="/hero.jpg"
 			/>
+			<Gallery />
 		</>
 	);
 }
 
-export default Gallery;
+export default Portfolio;

@@ -14,7 +14,6 @@ import MainButton from '@/components/ui/main-button';
 import SecondaryButton from '@/components/ui/secondary-button';
 import { MHeading } from '@/components/ui/heading';
 import {
-	sectionAnimation,
 	textAnimation,
 	stepAnimation,
 } from '@/lib/motion-animations';
@@ -110,8 +109,7 @@ function HowWeWorks() {
 					<motion.div
 						initial="hidden"
 						whileInView="visible"
-						viewport={{ amount: 0.4, once: true }}
-						variants={sectionAnimation}
+						viewport={{ amount: 0.3, once: true }}
 						className={styles.content}
 					>
 						<MHeading variants={textAnimation}>Як ми працюємо</MHeading>

@@ -44,9 +44,9 @@ function MainNav({ position, closeSidebar }) {
 			],
 		},
 		{
-			href: '/gallery',
+			href: '/portfolio',
 			label: 'Портфоліо',
-			isActive: pathName === '/gallery',
+			isActive: pathName === '/portfolio',
 		},
 		{
 			href: '/contacts',

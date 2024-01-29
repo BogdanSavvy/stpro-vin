@@ -31,7 +31,7 @@ function Footer() {
 										<Link href="/about">Про нас</Link>
 									</li>
 									<li className={styles.top__link}>
-										<Link href="/gallery">Портфоліо</Link>
+										<Link href="/portfolio">Портфоліо</Link>
 									</li>
 									<li className={styles.top__link}>
 										<Link href="/contacts">Зв'язатись з нами</Link>

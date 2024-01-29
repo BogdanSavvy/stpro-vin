@@ -6,11 +6,7 @@ import { motion } from 'framer-motion';
 import styles from '@/styles/about-us.module.scss';
 import Container from '@/components/ui/container';
 import { MHeading } from '@/components/ui/heading';
-import {
-	sectionAnimation,
-	textAnimation,
-	achivmentsAnimation,
-} from '@/lib/motion-animations';
+import { textAnimation, achivmentsAnimation } from '@/lib/motion-animations';
 
 function AboutUs() {
 	return (
@@ -18,7 +14,6 @@ function AboutUs() {
 			initial="hidden"
 			whileInView="visible"
 			viewport={{ amount: 0.4, once: true }}
-			variants={sectionAnimation}
 			className={styles.aboutUs}
 		>
 			<Container>

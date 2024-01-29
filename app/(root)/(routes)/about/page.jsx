@@ -17,7 +17,11 @@ function AboutPage() {
 			<GalleryBanner />
 			<WhyWe />
 			<ContactsBanner />
-			<Quote style={{paddingTop: '80px'}} autor="Генрі Форд" image="/hero_4.jpg">
+			<Quote
+				style={{ paddingTop: '80px' }}
+				autor="Генрі Форд"
+				image="/hero_4.jpg"
+			>
 				Якість – це <span>відсутність необхідності</span> робити щось знову
 			</Quote>
 		</>
