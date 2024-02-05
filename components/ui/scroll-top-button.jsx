@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import DoubleArrowOutlinedIcon from '@mui/icons-material/DoubleArrowOutlined';
+import { Tooltip } from '@mui/material';
 
 import styles from '@/styles/scroll-top-button.module.scss';
-import { Tooltip } from '@mui/material';
 
 const ScrollTopButton = () => {
 	const [show, setShow] = useState(false);

@@ -15,7 +15,7 @@ function ContatUs() {
 		<motion.section
 			initial="hidden"
 			whileInView="visible"
-			viewport={{ amount: 0.4, once: true }}
+			viewport={{ amount: 0.3, once: true }}
 			variants={sectionAnimation}
 			className={styles.contactUs}
 		>
@@ -28,8 +28,8 @@ function ContatUs() {
 							</MHeading>
 							<motion.p custom={1} variants={textAnimation}>
 								Ми завжди готові допомогти вам з ваший будівельним проектом!
-								Заповніть форму нижче, і наші експерти зв'яжуться з вами
-								найближчим часом, щоб надати детальну консультацію.
+								Заповніть форму і наші експерти зв'яжуться з вами
+								найближчим часом, щоб надати детальну консультацію по питанням які Вас цікавлять.
 							</motion.p>
 							<motion.p custom={1} variants={textAnimation}>
 								Не вагайтеся звертатися до нас з будь-якими питаннями або для
@@ -39,6 +39,7 @@ function ContatUs() {
 							</motion.p>
 						</section>
 						<section className={styles.contactUs__cards}>
+							{/* <h3>Контакти</h3> */}
 							<motion.article
 								custom={2}
 								variants={textAnimation}

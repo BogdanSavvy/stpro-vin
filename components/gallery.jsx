@@ -103,10 +103,10 @@ function Gallery() {
 				{detailImage && (
 					<figure className={styles.detail__image}>
 						<Image
+							fill
 							src={detailImage.src}
-							width={detailImage.width}
-							height={detailImage.height}
 							alt={`gallery_image_${detailImage.caption}`}
+							sizes="100vw"
 						/>
 						<figcaption>{detailImage.caption}</figcaption>
 					</figure>

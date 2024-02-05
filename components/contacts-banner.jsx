@@ -30,7 +30,7 @@ function ContactsBanner() {
 					<Link href="/contacts">Зв'язатись</Link>
 				</MainButton>
 			</motion.div>
-			<Image fill src="/stajka_2.jpg" alt="styazhka_banner" sizes="100%" />
+			<Image fill src="/stajka_2.jpg" alt="styazhka_banner" sizes="100vw" />
 		</motion.section>
 	);
 }

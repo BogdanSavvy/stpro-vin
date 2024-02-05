@@ -17,7 +17,7 @@ function MiniHero({ heading, description, image }) {
 			className={styles.miniHero}
 		>
 			<Container>
-				<div className={styles.miniHero__details}>
+				<article className={styles.miniHero__details}>
 					<motion.h1
 						custom={1}
 						variants={textAnimation}
@@ -32,9 +32,15 @@ function MiniHero({ heading, description, image }) {
 					>
 						{description}
 					</motion.p>
-				</div>
+				</article>
 			</Container>
-			<Image fill src={image} alt="minihero_image" sizes="100%" />
+			<Image
+				fill
+				priority={true}
+				src={image}
+				alt="minihero_image"
+				sizes="100vw"
+			/>
 		</motion.section>
 	);
 }

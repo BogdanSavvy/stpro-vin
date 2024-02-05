@@ -34,7 +34,7 @@ function Detail({ children, heading, image, reversed }) {
 						variants={cardAnimation}
 						className={styles.detail__image}
 					>
-						<Image fill src={image} alt={'about_image'} sizes="100%" />
+						<Image fill src={image} alt={'about_image'} sizes="100vw" />
 					</motion.figure>
 				)}
 			</div>

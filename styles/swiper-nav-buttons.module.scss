@@ -19,42 +19,6 @@
 		gap: 5px;
 		background: transparent;
 		color: $gold;
-		p {
-			font-size: 18px;
-			font-weight: 500;
-			text-transform: uppercase;
-			@media (max-width: 768px) {
-				display: none;
-			}
-		}
-		span {
-			width: 55px;
-			height: 3px;
-			position: relative;
-			background-color: $gold;
-			display: flex;
-			flex-direction: row;
-			&::before {
-				content: '';
-				position: absolute;
-				top: -5px;
-				right: 0;
-				height: 3px;
-				width: 12px;
-				background-color: $gold;
-				transform: rotate(45deg);
-			}
-			&::after {
-				content: '';
-				position: absolute;
-				bottom: -5px;
-				right: 0;
-				height: 3px;
-				width: 12px;
-				background-color: $gold;
-				transform: rotate(-45deg);
-			}
-		}
 	}
 	&__prevButton {
 		padding: 15px;
@@ -64,42 +28,6 @@
 		gap: 5px;
 		background: transparent;
 		color: $gold;
-		p {
-			font-size: 18px;
-			font-weight: 500;
-			text-transform: uppercase;
-			@media (max-width: 768px) {
-				display: none;
-			}
-		}
-		span {
-			width: 55px;
-			height: 3px;
-			position: relative;
-			background-color: $gold;
-			display: flex;
-			flex-direction: row;
-			&::before {
-				content: '';
-				position: absolute;
-				top: -5px;
-				left: -2px;
-				height: 3px;
-				width: 15px;
-				background-color: $gold;
-				transform: rotate(-45deg);
-			}
-			&::after {
-				content: '';
-				position: absolute;
-				bottom: -5px;
-				left: -2px;
-				height: 3px;
-				width: 15px;
-				background-color: $gold;
-				transform: rotate(45deg);
-			}
-		}
 	}
 
 	&__nextButton,
@@ -109,5 +37,72 @@
 		&:hover {
 			scale: 1.1;
 		}
+	}
+}
+
+.inscription {
+	font-size: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+
+.nextArrow {
+	width: 55px;
+	height: 3px;
+	position: relative;
+	background-color: $gold;
+	display: flex;
+	flex-direction: row;
+	&::before {
+		content: '';
+		position: absolute;
+		top: -5px;
+		right: 0;
+		height: 3px;
+		width: 12px;
+		background-color: $gold;
+		transform: rotate(45deg);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -5px;
+		right: 0;
+		height: 3px;
+		width: 12px;
+		background-color: $gold;
+		transform: rotate(-45deg);
+	}
+}
+
+.prevArrow {
+	width: 55px;
+	height: 3px;
+	position: relative;
+	background-color: $gold;
+	display: flex;
+	flex-direction: row;
+	&::before {
+		content: '';
+		position: absolute;
+		top: -5px;
+		left: -2px;
+		height: 3px;
+		width: 15px;
+		background-color: $gold;
+		transform: rotate(-45deg);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -5px;
+		left: -2px;
+		height: 3px;
+		width: 15px;
+		background-color: $gold;
+		transform: rotate(45deg);
 	}
 }

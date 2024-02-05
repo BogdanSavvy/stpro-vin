@@ -5,7 +5,7 @@ import styles from '@/styles/logo.module.scss';
 function Logo({ closeSidebar }) {
 	return (
 		<Link onClick={closeSidebar} href="/" className={styles.logo}>
-			<h2>ST PRO VIN</h2>
+			<p>ST PRO VIN</p>
 		</Link>
 	);
 }

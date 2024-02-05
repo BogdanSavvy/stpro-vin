@@ -61,7 +61,7 @@ function AboutUs() {
 								fill
 								src="/hero_2.webp"
 								alt="about-us_image_1"
-								sizes="100%"
+								sizes="100vw"
 							/>
 						</figure>
 						<figure className={styles.aboutUs__gridChild}>
@@ -69,7 +69,7 @@ function AboutUs() {
 								fill
 								src="/hero_3.jpg"
 								alt="about-us_image_2"
-								sizes="100%"
+								sizes="100vw"
 							/>
 						</figure>
 						<div className={styles.aboutUs__gridChild}>

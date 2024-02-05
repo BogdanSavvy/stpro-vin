@@ -1,1 +1,1 @@
-This is a commercial project for the Vinnitsa enterprise "ST PRO.VIN".
+This is a commercial project for the Vinnitsa enterprise "STPRO-VIN".

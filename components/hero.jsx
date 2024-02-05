@@ -35,7 +35,13 @@ function Hero({ imageUrl }) {
 					</motion.p>
 				</motion.article>
 			</Container>
-			<Image fill priority src={imageUrl} alt="Hero poster" sizes="100%" />
+			<Image
+				fill
+				priority={true}
+				src={imageUrl}
+				alt="Hero poster"
+				sizes="100vw"
+			/>
 		</section>
 	);
 }

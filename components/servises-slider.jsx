@@ -101,7 +101,7 @@ function ServisesSlider() {
 												src={servise.image}
 												fill
 												alt="slider image screed"
-												sizes="100%"
+												sizes="100vw"
 											/>
 											<motion.figcaption
 												{...swiperFadeAnimation(isActive, 3)}

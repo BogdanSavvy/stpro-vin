@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import { useSwiper } from 'swiper/react';
 
@@ -13,15 +13,15 @@ function SwiperNavButtons() {
 				onClick={() => swiper.slideNext()}
 				className={styles.sliderActions__nextButton}
 			>
-				<p>наступний</p>
-				<span></span>
+				<span className={styles.inscription}>наступний</span>
+				<span className={styles.nextArrow}></span>
 			</button>
 			<button
 				onClick={() => swiper.slidePrev()}
 				className={styles.sliderActions__prevButton}
 			>
-				<span></span>
-				<p>попередній</p>
+				<span className={styles.prevArrow}></span>
+				<span className={styles.inscription}>попередній</span>
 			</button>
 		</div>
 	);

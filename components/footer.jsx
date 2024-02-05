@@ -26,7 +26,7 @@ function Footer() {
 							</div>
 							<nav className={styles.top__navigation}>
 								<ul className={styles.top__list}>
-									<h4 className={styles.top__listHeading}>КОМПАНІЯ</h4>
+									<li className={styles.top__listHeading}>Компанія</li>
 									<li className={styles.top__link}>
 										<Link href="/about">Про нас</Link>
 									</li>
@@ -38,7 +38,7 @@ function Footer() {
 									</li>
 								</ul>
 								<ul className={styles.top__list}>
-									<h4 className={styles.top__listHeading}>ПОСЛУГИ</h4>
+									<li className={styles.top__listHeading}>Послуги</li>
 									<li className={styles.top__link}>
 										<Link href="/servises/screed">Напівсуха стяжка</Link>
 									</li>
@@ -49,13 +49,6 @@ function Footer() {
 										<Link href="/servises/roofing">Покрівля</Link>
 									</li>
 								</ul>
-								{/* <ul className={styles.top__list}>
-									<h4 className={styles.top__listHeading}>Heading</h4>
-									<li className={styles.top__link}>some Link</li>
-									<li className={styles.top__link}>some Link</li>
-									<li className={styles.top__link}>some Link</li>
-									<li className={styles.top__link}>some Link</li>
-								</ul> */}
 							</nav>
 						</div>
 					</div>
