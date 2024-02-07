@@ -25,14 +25,15 @@
 	}
 	&__details {
 		line-height: 165%;
-		font-size: 16px;
+		font-size: 18px;
+		text-align: justify;
 		p {
 			&:not(:last-child) {
 				margin-bottom: 10px;
 			}
 		}
 		@media (max-width: 768.9px) {
-			font-size: 14px;
+			font-size: 16px;
 		}
 	}
 	&__expandIcon {

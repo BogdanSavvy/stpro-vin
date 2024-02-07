@@ -17,9 +17,13 @@
 		padding: 15px 0;
 		span {
 			color: $text-secondary;
-			font-size: 18px;
+			font-size: 20px;
+			font-family: inherit;
 			span {
 				padding-left: 10px;
+			}
+			@media (max-width: 768px) {
+				font-size: 18px;
 			}
 		}
 		svg {
@@ -30,7 +34,9 @@
 	&__stepContent {
 		color: $text-secondary;
 		line-height: 155%;
+		font-family: inherit;
 		p {
+			text-align: justify;
 			font-size: 18px;
 			line-height: 175%;
 			margin-bottom: 15px;

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -10,6 +11,8 @@ import {
 	InputLabel,
 	MenuItem,
 	FormControl,
+	Snackbar,
+	Alert,
 } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -18,6 +21,16 @@ import MainButton from '@/components/ui/main-button';
 import { sendOrderAction } from '@/action/sendOrderAction';
 
 function ContactUsForm() {
+	const [openSnackBar, setOpenSnackBar] = useState(false);
+
+	const handleClose = reason => {
+		if (reason === 'clickaway') {
+			return;
+		}
+
+		setOpenSnackBar(false);
+	};
+
 	const phoneRegExp =
 		/^[\+]?3?[\s]?8?[\s]?\(?0\d{2}?\)?[\s]?\d{3}[\s|-]?\d{2}[\s|-]?\d{2}$/;
 	const schema = yup
@@ -36,19 +49,12 @@ function ContactUsForm() {
 		})
 		.required();
 
-	const selectOptions = [
-		{ name: 'Консультація' },
-		{ name: 'Стяжка підлоги' },
-		{ name: 'Штукатурка стін' },
-		{ name: 'Покрівля даху' },
-	];
-
 	const {
 		register,
 		handleSubmit,
 		control,
 		reset,
-		formState: { errors },
+		formState: { errors, isSubmitting },
 	} = useForm({
 		defaultValues: {
 			name: '',
@@ -61,7 +67,10 @@ function ContactUsForm() {
 
 	const onSubmit = async data => {
 		let message = `<b>Клієнт: </b> ${data.name}\n`;
-		message += `<b>Номер телефону: </b> ${data.phoneNumber}\n\n`;
+		message += `<b>Номер телефону: </b> ${data.phoneNumber.replaceAll(
+			' ',
+			'',
+		)}\n\n`;
 
 		if (data.servise) {
 			message += `<b>Послуга: </b> ${data.servise}\n`;
@@ -70,9 +79,21 @@ function ContactUsForm() {
 			message += `<b>Повідомлення: </b> ${data.message}\n`;
 		}
 
-		await sendOrderAction(message);
+		const res = await sendOrderAction(message);
+
+		if (res?.ok) {
+			setOpenSnackBar(true);
+		}
+
 		return reset();
 	};
+
+	const selectOptions = [
+		{ name: 'Консультація' },
+		{ name: 'Стяжка підлоги' },
+		{ name: 'Штукатурка стін' },
+		{ name: 'Покрівля даху' },
+	];
 
 	const theme = createTheme({
 		palette: {
@@ -85,11 +106,56 @@ function ContactUsForm() {
 			},
 		},
 		components: {
+			MuiFormLabel: {
+				styleOverrides: {
+					root: {
+						fontFamily: 'inherit',
+						letterSpacing: '0,3px',
+						color: '#ffff',
+					},
+				},
+			},
 			MuiPaper: {
 				styleOverrides: {
 					root: {
 						fontSize: '2rem',
 						backgroundColor: '#393F47',
+					},
+				},
+			},
+			MuiSelect: {
+				styleOverrides: {
+					root: {
+						fontFamily: 'inherit',
+					},
+				},
+			},
+			MuiMenuItem: {
+				styleOverrides: {
+					root: {
+						fontFamily: 'inherit',
+					},
+				},
+			},
+			MuiInput: {
+				styleOverrides: {
+					root: {
+						fontFamily: 'inherit',
+						letterSpacing: '1px',
+					},
+				},
+			},
+			MuiTypography: {
+				styleOverrides: {
+					root: {
+						fontFamily: 'inherit',
+					},
+				},
+			},
+			MuiAlert: {
+				styleOverrides: {
+					root: {
+						fontFamily: 'inherit',
 					},
 				},
 			},
@@ -154,8 +220,20 @@ function ContactUsForm() {
 					helperText={errors.message?.message}
 					className={`${styles.contactUs__field} ${styles.contactUs__bigTxtArea}`}
 				/>
-				<MainButton type="submit">Надіслати</MainButton>
+				<MainButton disabled={isSubmitting} type="submit">
+					Надіслати
+				</MainButton>
 			</form>
+			<Snackbar
+				open={openSnackBar}
+				autoHideDuration={5000}
+				onClose={handleClose}
+			>
+				<Alert onClose={handleClose} severity="success" variant="filled">
+					Запит на консультацію успішно надісланий. Очікуйте на здвінок від
+					майстра.
+				</Alert>
+			</Snackbar>
 		</ThemeProvider>
 	);
 }

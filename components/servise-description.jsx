@@ -1,14 +1,13 @@
 import Container from '@/components/ui/container';
-import Heading from '@/components/ui/heading';
+import Detail from '@/components/ui/detail';
 
 function ServiseDescription({ data }) {
 	return (
-		<section>
+		<section style={{ paddingTop: '80px' }}>
 			<Container>
-				<Heading>{data.heading}</Heading>
-				<article>
+				<Detail heading={data.heading} image={data.image}>
 					<p>{data.description}</p>
-				</article>
+				</Detail>
 			</Container>
 		</section>
 	);

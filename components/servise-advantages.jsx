@@ -1,19 +1,18 @@
 import React from 'react';
 import Container from './ui/container';
-import Heading from './ui/heading';
+import Detail from './ui/detail';
 
 function ServiseAdvantages({ data }) {
 	return (
 		<section>
 			<Container>
-				<Heading>{data.heading}</Heading>
-				<article>
+				<Detail heading={data.heading}>
 					<ul>
 						{data.list.map((item, index) => (
 							<li key={index}>{item.text}</li>
 						))}
 					</ul>
-				</article>
+				</Detail>
 			</Container>
 		</section>
 	);

@@ -109,6 +109,7 @@ function ServisesSlider() {
 											>
 												<div className={styles.slide__priceTag}>
 													{servise.price} грн/м<sup>2</sup>
+													<span></span>
 												</div>
 											</motion.figcaption>
 										</motion.figure>

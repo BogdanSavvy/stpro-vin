@@ -4,11 +4,13 @@
 	margin-bottom: 80px;
 	position: relative;
 	z-index: 3;
+	overflow: hidden;
 	&__body {
 		display: flex;
 		flex-direction: row;
-		height: 450px;
+		min-height: 400px;
 		p {
+			text-align: justify;
 			padding-right: 30px;
 		}
 
@@ -23,8 +25,8 @@
 		flex: 1 0 60%;
 		display: flex;
 		flex-direction: column;
-		row-gap: 15px;
-		font-size: 22px;
+		gap: 15px;
+		font-size: 20px;
 		line-height: 165%;
 
 		@media (max-width: 1024px) {
@@ -41,21 +43,29 @@
 			row-gap: 10px;
 		}
 		li {
+			text-align: justify;
 			position: relative;
-			padding-left: 25px;
+			padding-left: 30px;
 			&::after {
 				content: '';
 				position: absolute;
-				top: 15%;
-				left: 0;
+				top: 25%;
+				left: 5px;
 				width: 10px;
 				height: 10px;
 				background-color: $gold;
 				transform: rotate(45deg);
 			}
 
+			@media (max-width: 768px) {
+				&::after {
+					top: 15%;
+				}
+			}
 			@media (max-width: 425px) {
-				top: 10px;
+				&::after {
+					top: 10px;
+				}
 			}
 		}
 	}
@@ -73,7 +83,8 @@
 	&__bodyReversed {
 		display: flex;
 		flex-direction: row-reverse;
-		height: 450px;
+		min-height: 400px;
+		gap: 10px;
 		p {
 			padding-left: 30px;
 		}

@@ -11,8 +11,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-	title: 'STPRO-vin',
-	description: 'Screed in Vinnitsia',
+	title: 'STPRO-VIN',
+	description:
+		'Машинна стяжка підлоги та інші будівельні послуги в м.Вінниця та у Вінницькій області',
 };
 
 export default function RootLayout({ children }) {

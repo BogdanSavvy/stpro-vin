@@ -7,7 +7,7 @@ import { MHeading } from '@/components/ui/heading';
 import styles from '@/styles/detail.module.scss';
 import { textAnimation, cardAnimation } from '@/lib/motion-animations';
 
-function Detail({ children, heading, image, reversed }) {
+function Detail({ children, heading, image, reversed = false }) {
 	return (
 		<motion.article
 			initial="hidden"
