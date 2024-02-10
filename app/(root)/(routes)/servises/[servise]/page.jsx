@@ -10,81 +10,79 @@ import ServiseWhenStart from '@/components/servise-when-start';
 const data = {
 	screed: {
 		hero: {
-			heading: 'Машинна стяжка підлоги',
-			description:
-				'Гарантуємо найрівнішу поверхню, швидкість та якість за приємну ціну у місті Вінниця та Вінницькій області.',
-			image: '/hero.jpg',
+			heading:
+				'Машинна напівсуха стяжка підлоги: Ідеальна основа для Вашого житла',
+			description: `Високоякісні рішення в області стяжки підлоги для максимального комфорту та довговічності. 
+				Гарантуємо найрівнішу поверхню, швидкість та якість за приємну ціну у місті Вінниця та Вінницькій області.`,
+			image: '/images/styazhka_4.jpg',
+			alt: 'Міні-плакат - Машинна стяжка підлоги',
 		},
 		description: {
 			heading: 'Що таке машинна стяжка підлоги?',
-			description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-			Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-			sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!
-			Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-			Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-			sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam! `,
+			description: [
+				{
+					paragraph: `Машинна напівсуха стяжка представляє собою ефективний метод вирівнювання поверхні підлоги, що використовує механізований підхід. 
+				Цей спосіб знаходить своє застосування при ремонті квартир в новобудовах або приватних будинках, дозволяючи швидко та якісно вирівняти підлогу за передовою німецькою технологією.`,
+				},
+				{
+					paragraph: `Основний компонент напівсухої стяжки – це суміш, яка включає великозернистий пісок, цемент, фіброволокно і пластифікатор. 
+				Ці складові дозволяють досягти високої якості вирівнювання підлоги, ефективно усуваючи нерівності та значні перепади на її поверхні. 
+				Використання цієї технології сприяє швидкому завершенню робіт і отриманню ідеальної гладкості підлоги, що є важливим етапом в будівельних та ремонтних процесах.`,
+				},
+			],
 			image: '/hero.jpg',
+			alt: 'STPRO-VIN машинна сятжка - опис',
 		},
 		advantages: {
 			heading: 'Переваги машинної стяжки підлоги',
 			list: [
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-			Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-			sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Швидкість виконання: машинна стяжка виконується швидше за ручну, тому що машинна техніка дозволяє розподілити матеріал рівномірно та швидко.`,
 				},
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Висока якість: машинна стяжка забезпечує більш рівномірну та гладку поверхню, що робить її ідеальною для встановлення підлогових покриттів, 
+					таких як ковролін, ламінат, плитка, паркет та ін.`,
 				},
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Висока Міцність: Використання спеціальних добавок та якісних матеріалів забезпечує високу міцність стяжки, що робить її ідеальним вибором для будь-якого приміщення.`,
 				},
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Економія матеріалів: машинна стяжка забезпечує більш точне дозування матеріалів, що дозволяє зменшити витрати на матеріали та знизити відходи.`,
 				},
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Економія витрат: використання машинної стяжки підлоги може бути економічно вигіднішим за ручну стяжку. За рахунок зменшення часу, 
+					витраченого на виконання робіт, зниження кількості матеріалів та кращої якості робіт, машинна стяжка може бути більш ефективним варіантом.`,
 				},
 			],
+			image: '/images/styazhka_6.jpg',
+			alt: 'Зашліфована стяжка підлоги 1',
 		},
 		whenStart: {
 			heading: 'Коли варто робити стяжку:',
 			list: [
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-			Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-			sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Після встановлення систем водопостачання та водовідведення: 
+					Якщо ви плануєте встановити сантехніку або системи водопостачання та водовідведення, то перш за все необхідно встановити їх перед початком робіт зі стяжкою підлоги. 
+					Встановлення цих систем перед стяжкою підлоги забезпечить можливість розташування труб та інших елементів підлоги за межами стяжки.`,
 				},
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Після установки теплоізоляції: 
+					Якщо ви встановлюєте теплоізоляцію підлоги, то рекомендується зробити стяжку після її встановлення. 
+					Таким чином, ви можете впевнитися, що теплоізоляція захищена та правильно встановлена.`,
 				},
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Перед встановленням підлогового покриття: 
+					Якщо ви плануєте встановити підлогове покриття, таке як керамічна плитка або ламінат, то рекомендується зробити стяжку підлоги перед початком укладання покриття. 
+					Це забезпечить рівну та стійку поверхню для укладання покриття.`,
 				},
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
-				},
-				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Після завершення внутрішніх робіт: 
+					Якщо ви робите ремонт в квартирі або будинку, то рекомендується починати роботи зі стяжкою підлоги після завершення внутрішніх робіт, 
+					таких як фарбування, обшивка стін або установка дверей. Це допоможе зменшити можливість пошкодження стяжки підлоги під час проведення інших робіт.`,
 				},
 			],
-			image: '/hero.jpg',
+			image: '/images/styazhka_work_3.jpg',
+			alt: 'Процес роботи майстра STPRO-VIN',
 		},
 		prices: {
 			ourMaterials: '280',
@@ -93,52 +91,71 @@ const data = {
 	},
 	plaster: {
 		hero: {
-			heading: 'Машинна штукатурка стін',
+			heading: 'Машинна штукатурка стін: Новий рівень естетики та надійності',
 			description:
-				'Гарантуємо найрівнішу поверхню, швидкість та якість за приємну ціну у місті Вінниця та Вінницькій області.',
-			image: '/hero.jpg',
+				'Професійна обробка стін, яка поєднує елегантність, швидкість та якість за приємну ціну у місті Вінниця.',
+			image: '/images/plaster_1.jpg',
+			alt: 'Міні-плакат - Машинна штукатурка стін',
 		},
 		description: {
 			heading: 'Машинна штукатурка стін',
-			description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-			Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-			sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+			description: [
+				{
+					paragraph: `Машинна штукатурка стін представляє собою інноваційний, ефективний і економічний метод підготовки як зовнішніх, так і внутрішніх поверхонь перед завершальним оздобленням. 
+					Цей сучасний підхід ґрунтується на використанні спеціальної машини, яка здатна працювати як з гіпсовими, так і з цементно-вапняними сумішами, забезпечуючи високий ступінь якості обробки поверхні. `,
+				},
+				{
+					paragraph: `Процес машинного оштукатурювання включає кілька етапів, які допомагають досягти оптимальних результатів. По-перше, поверхню готують, очищаючи її від будь-яких дефектів і нерівностей. 
+					Потім спеціальна машина рівномірно та швидко розподіляє штукатурку по стіні, дозволяючи отримати гладку і однорідну поверхню.`,
+				},
+				{
+					paragraph: `Машинна штукатурка стін в м.Вінниця від нашої компанії – це не просто обробка поверхні, це творчий підхід який вразить своєю красою та індивідуальністю.`,
+				},
+			],
 			image: '/hero_2.webp',
+			alt: 'STPRO-VIN машинна штукатурка - опис',
 		},
 		advantages: {
 			heading: 'Переваги машинної штукатурки',
-			list: [{ text: 'text 1' }, { text: 'text 2' }, { text: 'text 3' }],
+			list: [
+				{
+					text: 'Швидкість виконання робіт: Машинний процес дозволяє ефективно виконувати штукатурні роботи, зекономивши час та забезпечивши якісний результат.',
+				},
+				{
+					text: 'Міцність та стійкість: Матеріали високої якості гарантують міцність та стійкість покриття, що залишається незмінним протягом тривалого часу.',
+				},
+				{
+					text: 'Рівномірність та гладкість: Завдяки точному дозуванню матеріалів та автоматизованому процесу нанесення, ми досягаємо ідеально гладкої поверхні.',
+				},
+				{
+					text: 'Економія матеріалів: машинна штукатурка може ефективно використовувати матеріали, оскільки вона точно дозує їх та наносить на стіни без втрат.',
+				},
+			],
+			image: '/images/plaster_4.jpg',
+			alt: 'Машинна штукатурка "Переваги"',
 		},
 		whenStart: {
 			heading: 'Коли варто робити стяжку:',
 			list: [
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-			Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-			sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Будівництво нових будинків або ремонт і реконструкція старих: 
+					Машинна штукатурка може бути корисною для створення рівномірного та гладкого шару на поверхнях стін, що дозволяє створити привабливий та якісний фініш.`,
 				},
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Використання на великих площах: 
+					Машинна штукатурка є швидшою та більш продуктивною, ніж ручна штукатурка, тому її можна застосовувати на великих площах, таких як склади, промислові будівлі, багатоквартирні будинки та інші.`,
 				},
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Робота в умовах обмеженої доступності: 
+					Машинна штукатурка може бути використана в умовах, коли ручна штукатурка є неможливою або неефективною.`,
 				},
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
-				},
-				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Зниження вартості робіт: 
+					Машинна штукатурка може допомогти знизити витрати на працю та матеріали порівняно з ручною штукатуркою, що може бути важливим фактором при бюджетуванні будівельних робіт.`,
 				},
 			],
-			image: '/hero.jpg',
+			image: '/images/plaster_2.jpg',
+			alt: 'Штукатурка стін (завершена)',
 		},
 		prices: {
 			ourMaterials: '330',
@@ -147,52 +164,78 @@ const data = {
 	},
 	roofing: {
 		hero: {
-			heading: 'Покрівля дахів інноваційним методом',
+			heading: 'Покрівля поверхні інноваційним методом розуклонів',
 			description:
-				'Гарантуємо найрівнішу поверхню, швидкість та якість за приємну ціну у місті Вінниця та Вінницькій області.',
-			image: '/hero.jpg',
+				'Гарантуємо найкращу покрівлю поверхні методом розуклону поверхні будь-якої складності. Обіцяємо надійність, швидкість та якість за приємну ціну у місті Вінниця та Вінницькій області.',
+			image: '/images/rozuklon_1.jpg',
+			alt: 'Міні-плакат - Покрівля поверхні методом розуклонів',
 		},
 		description: {
 			heading: 'Покриття дахів метод розуклонки поверхні',
-			description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-			Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-			sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
-			image: '/hero_5.png',
+			description: [
+				{
+					paragraph: `Створення покрівлі за допомогою методу Розуклонів представляє собою новаторський підхід, спрямований на створення надійних та високоякісних покрівельних систем. 
+					Цей метод, який використовує ту ж саму передову технологію, що і при застосуванні напівсухої стяжки для підлог, виявляється відмінним рішенням для влаштування нахилених 
+					покрівель або створення необхідних уклонів для ефективного відведення води.`,
+				},
+				{
+					paragraph: `Метод розуклонів відкриває нові перспективи у побудові покрівель, забезпечуючи не лише стійкість та довговічність, але й оптимальну систему для відводу опадів. 
+					Застосування цього методу дозволяє досягти високої якості влаштування покрівлі, забезпечуючи при цьому ефективне відведення води від поверхні. 
+					Це важливо не лише для забезпечення тривалого функціонування покрівлі, але і для забезпечення захисту будівлі від впливу атмосферних опадів та забезпечення комфорту в приміщенні.`,
+				},
+			],
+			image: '/images/rozuklon_4.jpg',
+			alt: 'STPRO-VIN покрівля з розуклонами - опис',
 		},
 		advantages: {
 			heading: 'Переваги покриття методом розуклонів',
-			list: [{ text: 'text 1' }, { text: 'text 2' }, { text: 'text 3' }],
-		},
-		whenStart: {
-			heading: 'Коли варто робити стяжку:',
 			list: [
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-			Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-			sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Оптимальний уклон: Метод дозволяє створити точно налаштований уклон, що забезпечує ефективне стокування води та попереджає утворення стоячої води.`,
 				},
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Універсальність застосування: Покрівля методом Розуклонів ідеально підходить для будь-якого типу даху чи поверхні, де необхідно керувати напрямком водостоку.`,
 				},
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Міцність та висока тривалість: Використання високоякісних матеріалів гарантує надійність та довговічність покрівельної системи.`,
 				},
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Захист від вологи: Ідеальне рішення для створення водонепроникних та надійних покрівель, які забезпечують довговічний захист будівлі.`,
 				},
 				{
-					text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-				Maxime minima et libero enim rerum at unde consequatur odit culpa veritatis, 
-				sunt animi fugit eius aperiam adipisci officiis nostrum aliquid. Nam!`,
+					text: `Енергоефективність: Плоский дах може забезпечувати кращу термоізоляцію, ніж крутий дах, тому він може допомогти знизити витрати на опалення та охолодження приміщення.`,
+				},
+				{
+					text: `Естетика: Плоский дах може мати більш сучасний та стильний вигляд, що може підкреслити архітектурний дизайн будівлі.`,
 				},
 			],
-			image: '/hero.jpg',
+			image: '/images/rozuklon_2.jpg',
+			alt: 'Покрівля метод розуклонів - переваги',
+		},
+		whenStart: {
+			heading: 'Як правильно зробити розуклонку даху?',
+			list: [
+				{
+					text: `Професійний аналіз: Спочатку важливо визначити потрібний нахил плоского даху. Для цього необхідно враховувати площу даху, розмір покриття та інші фактори. 
+					Найчастіше застосовують нахил від 1% до 5% в залежності від розміру та конфігурації даху.`,
+				},
+				{
+					text: `Визначення необхідного уклону: Залежно від типу покрівлі та місцевих умов, визначте оптимальний кут нахилу для забезпечення ефективного відведення води. 
+					Найчастіше застосовують нахил від 1% до 5% в залежності від розміру та конфігурації даху.`,
+				},
+				{
+					text: `Підготувати поверхню: Перед встановленням розуклонки необхідно підготувати поверхню даху, щоб забезпечити якість та довговічність робіт. 
+					Поверхню необхідно очистити від бруду, пилу та інших забруднень. Якщо поверхня не рівна, її можна вирівняти за допомогою спеціальних матеріалів, наприклад, рідинного рівнителя.`,
+				},
+				{
+					text: `Зробити розуклонку: Укласти смуги цементно-піщаного розчину по маяках. Вирівняти його. Відшліфувати поверхню.`,
+				},
+				{
+					text: `Перевірити нахил: Після завершення монтажу слід перевірити, чи він правильний. Якщо все добре – здаємо роботу.`,
+				},
+			],
+			image: '/images/rozuklon_5.png',
+			alt: 'Покрівля даху з уклоном (виконана)',
 		},
 		prices: {
 			ourMaterials: '260',
@@ -226,6 +269,7 @@ function ServisesPage({ params }) {
 				heading={serviseData.hero.heading}
 				description={serviseData.hero.description}
 				image={serviseData.hero.image}
+				alt={serviseData.hero.alt}
 			/>
 			<ServiseDescription data={serviseData.description} />
 			<ServiseAdvantages data={serviseData.advantages} />
@@ -233,7 +277,11 @@ function ServisesPage({ params }) {
 			<ServiseWhenStart data={serviseData.whenStart} />
 			<ContactsBanner />
 			<FAQ />
-			<Quote image="/hero_4.jpg" autor="ДЖОН Л. ДЖОНСОН">
+			<Quote
+				image="/images/quote_1.jpg"
+				alt="Цитата - Джон Л. Джонсон"
+				autor="Джон Л. Джонсон"
+			>
 				Якість – <span> це наша краща стратегія</span> бізнесу
 			</Quote>
 		</>

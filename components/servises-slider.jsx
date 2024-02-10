@@ -26,6 +26,7 @@ const servises = [
 		Довірте нам створення ідеальної основи для вашого простору, де комфорт і міцність зливаються в єдиний гармонійний результат.`,
 		price: '280',
 		image: '/screed-machine.png',
+		alt: 'Машинна стяжка підлоги (Машина)',
 		href: '/servises/screed',
 	},
 	{
@@ -36,6 +37,7 @@ const servises = [
 		Довірте нам створення стін, які відзначаються не лише бездоганною текстурою, але й вираженою індивідуальністю вашого простору.`,
 		price: '330',
 		image: '/plastering-machine.png',
+		alt: 'Машинна штукатурка стін (Машина)',
 		href: '/servises/plaster',
 	},
 	{
@@ -46,6 +48,7 @@ const servises = [
 		але і естетично виглядний елемент вашої будівлі. `,
 		price: '260',
 		image: '/zatir_mach_2.png',
+		alt: 'Покрівля методом розуклону певерхні (Машина)',
 		href: '/servises/roofing',
 	},
 ];
@@ -101,7 +104,7 @@ function ServisesSlider() {
 												src={servise.image}
 												fill
 												alt="slider image screed"
-												sizes="100vw"
+												sizes="50vw"
 											/>
 											<motion.figcaption
 												{...swiperFadeAnimation(isActive, 3)}

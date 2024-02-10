@@ -2,7 +2,7 @@
 
 // import { useEffect, useState } from 'react';
 
-function Map() {
+async function Map() {
 	// const [isMounted, setIsMounted] = useState(false);
 
 	// useEffect(() => {

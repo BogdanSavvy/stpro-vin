@@ -2,11 +2,11 @@
 
 .costCalculation {
 	position: relative;
-	padding: 0px 0 120px 0;
+	padding: 50px 0 120px 0;
 	overflow: hidden;
 
 	@media (max-width: 1024px) {
-		padding: 00px 0 80px 0;
+		padding: 0px 0 80px 0;
 	}
 }
 
@@ -35,6 +35,10 @@
 	line-height: 165%;
 	&:not(:last-child) {
 		margin-bottom: 15px;
+	}
+
+	span {
+		color: $gold;
 	}
 
 	@media (max-width: 1024px) {

@@ -28,18 +28,19 @@ function ContatUs() {
 							</MHeading>
 							<motion.p custom={1} variants={textAnimation}>
 								Ми завжди готові допомогти вам з ваший будівельним проектом!
-								Заповніть форму і наші експерти зв'яжуться з вами
-								найближчим часом, щоб надати детальну консультацію по питанням які Вас цікавлять.
+								Заповніть форму і наші експерти зв'яжуться з вами найближчим
+								часом, щоб надати детальну консультацію по питанням які Вас
+								цікавлять.
 							</motion.p>
 							<motion.p custom={1} variants={textAnimation}>
-								Не вагайтеся звертатися до нас з будь-якими питаннями або для
+								Не вагайтеся звертатися до нас з будь-якими питаннями, або для
 								отримання додаткової інформації. Наша команда готова надати вам
 								кваліфіковану підтримку та забезпечити успішну реалізацію вашого
-								будівельного проекту.
+								будівельного проекту. Також можете зателефонувати нам самостійно
+								використовуючі наші контактні номери нижче.
 							</motion.p>
 						</section>
 						<section className={styles.contactUs__cards}>
-							{/* <h3>Контакти</h3> */}
 							<motion.article
 								custom={2}
 								variants={textAnimation}
@@ -49,8 +50,8 @@ function ContatUs() {
 									<Image
 										width={60}
 										height={60}
-										src="/phone.png"
-										alt="phone_png"
+										src="/icons/phone.png"
+										alt="Іконка - телефон"
 									/>
 								</figure>
 								<div className={styles.card__contacts}>
@@ -67,8 +68,8 @@ function ContatUs() {
 									<Image
 										width={60}
 										height={60}
-										src="/email.png"
-										alt="email_png"
+										src="/icons/email.png"
+										alt="Іконка - пошта"
 									/>
 								</figure>
 								<div className={styles.card__contacts}>

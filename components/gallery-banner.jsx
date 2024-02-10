@@ -13,6 +13,34 @@ import {
 	sliderAnimation,
 	textAnimation,
 } from '@/lib/motion-animations';
+import Link from 'next/link';
+
+const slides = [
+	{
+		image: '/images/styazhka_6.jpg',
+		alt: 'Машинна стяжка 2',
+	},
+	{
+		image: '/images/plaster_1.jpg',
+		alt: 'Машинна штукатурка - до',
+	},
+	{
+		image: '/images/styazhka_2.jpg',
+		alt: 'Машинна стяжка 1',
+	},
+	{
+		image: '/images/rozuklon_3.jpg',
+		alt: 'Розуклонка поверхні басейну 1',
+	},
+	{
+		image: '/images/styazhka_work_2.jpg',
+		alt: 'Машинна стяжка процес роботи - 1',
+	},
+	{
+		image: '/images/plaster_2.jpg',
+		alt: 'Машинна штукатурка - після',
+	},
+];
 
 function GalleryBanner() {
 	return (
@@ -69,72 +97,14 @@ function GalleryBanner() {
 						}}
 						loop={true}
 					>
-						<SwiperSlide>
-							<div className={styles.galleryBanner__slide}>
-								<Image
-									fill
-									src="/hero_2.webp"
-									alt="miniGalery image"
-									sizes="100%"
-								/>
-								<button>Більше</button>
-							</div>
-						</SwiperSlide>
-						<SwiperSlide>
-							<div className={styles.galleryBanner__slide}>
-								<Image
-									fill
-									src="/hero_2.webp"
-									alt="miniGalery image"
-									sizes="100%"
-								/>
-								<button>Більше</button>
-							</div>
-						</SwiperSlide>
-						<SwiperSlide>
-							<div className={styles.galleryBanner__slide}>
-								<Image
-									fill
-									src="/hero_2.webp"
-									alt="miniGalery image"
-									sizes="100%"
-								/>
-								<button>Більше</button>
-							</div>
-						</SwiperSlide>
-						<SwiperSlide>
-							<div className={styles.galleryBanner__slide}>
-								<Image
-									fill
-									src="/hero_2.webp"
-									alt="miniGalery image"
-									sizes="100%"
-								/>
-								<button>Більше</button>
-							</div>
-						</SwiperSlide>
-						<SwiperSlide>
-							<div className={styles.galleryBanner__slide}>
-								<Image
-									fill
-									src="/hero_2.webp"
-									alt="miniGalery image"
-									sizes="100%"
-								/>
-								<button>Більше</button>
-							</div>
-						</SwiperSlide>
-						<SwiperSlide>
-							<div className={styles.galleryBanner__slide}>
-								<Image
-									fill
-									src="/hero_2.webp"
-									alt="miniGalery image"
-									sizes="100%"
-								/>
-								<button>Більше</button>
-							</div>
-						</SwiperSlide>
+						{slides.map((slide, index) => (
+							<SwiperSlide key={index}>
+								<figure className={styles.galleryBanner__slide}>
+									<Image fill src={slide.image} alt={slide.alt} sizes="50vw" />
+									<Link href="/portfolio">Більше</Link>
+								</figure>
+							</SwiperSlide>
+						))}
 					</Swiper>
 				</motion.div>
 			</Container>

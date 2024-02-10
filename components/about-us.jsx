@@ -59,17 +59,17 @@ function AboutUs() {
 						<figure className={styles.aboutUs__gridChild}>
 							<Image
 								fill
-								src="/hero_2.webp"
-								alt="about-us_image_1"
-								sizes="100vw"
+								src="/images/rozuklon_4.jpg"
+								alt="Покрівля поверхні басейну методом розуклонів"
+								sizes="50vw"
 							/>
 						</figure>
 						<figure className={styles.aboutUs__gridChild}>
 							<Image
 								fill
-								src="/hero_3.jpg"
-								alt="about-us_image_2"
-								sizes="100vw"
+								src="/images/styazhka_work_1.jpg"
+								alt="Напівсуха стяжка підлоги в роботі"
+								sizes="50vw"
 							/>
 						</figure>
 						<div className={styles.aboutUs__gridChild}>

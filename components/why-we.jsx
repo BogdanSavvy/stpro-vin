@@ -38,7 +38,7 @@ function WhyWe() {
 		>
 			<Container>
 				<MHeading custom={1} variants={textAnimation}>
-					Чому слід обирати нас?
+					Чому слід обирати нас нас?
 				</MHeading>
 				<div className={styles.whyWe__body}>
 					{cards.map((card, index) => (

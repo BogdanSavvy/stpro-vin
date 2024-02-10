@@ -7,7 +7,7 @@ import styles from '@/styles/quote.module.scss';
 import Container from '@/components/ui/container';
 import { textAnimation, bannerAnimation } from '@/lib/motion-animations';
 
-function Quote({ children, autor, image, style }) {
+function Quote({ children, autor, image, alt, style }) {
 	return (
 		<motion.section
 			initial="hidden"
@@ -23,7 +23,7 @@ function Quote({ children, autor, image, style }) {
 						variants={textAnimation}
 						className={styles.blockquote__octogon}
 					>
-						<Image fill src={image} alt="quote_image" sizes="100%" />
+						<Image fill src={image} alt={alt} sizes="100%" />
 					</motion.figure>
 					<motion.blockquote
 						variants={bannerAnimation}

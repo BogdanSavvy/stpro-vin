@@ -13,7 +13,7 @@ function ContactsBanner() {
 		<motion.section
 			initial="hidden"
 			whileInView="visible"
-			viewport={{ amount: 0.4, once: true }}
+			viewport={{ amount: 0.3, once: true }}
 			variants={sectionAnimation}
 			className={styles.banner}
 		>
@@ -30,7 +30,12 @@ function ContactsBanner() {
 					<Link href="/contacts">Зв'язатись</Link>
 				</MainButton>
 			</motion.div>
-			<Image fill src="/stajka_2.jpg" alt="styazhka_banner" sizes="100vw" />
+			<Image
+				fill
+				src="/images/styazhka_3.jpg"
+				alt="Стяжка підлоги - банер"
+				sizes="100vw"
+			/>
 		</motion.section>
 	);
 }

@@ -11,7 +11,6 @@
 	background-color: $lighterBg;
 	color: $text-main;
 
-
 	@media (max-width: 1024px) {
 		font-size: 32px;
 	}
@@ -25,8 +24,7 @@
 
 .gallery {
 	img {
-		max-width: 100%;
-		height: auto;
+		object-fit: cover;
 		transform-origin: top left;
 	}
 
@@ -36,7 +34,7 @@
 		align-content: space-between;
 		overflow: hidden;
 		width: 100%;
-		height: 150vh;
+		height: 250vh;
 
 		&::before,
 		&::after {
@@ -77,7 +75,7 @@
 			color: $gold;
 			font-weight: 500;
 			font-size: 18px;
-			text-shadow: 0 0 2px #000;
+			text-shadow: 1px 2px 2px $dark;
 			opacity: 0.8;
 			padding: 1em;
 			text-align: left;
@@ -105,7 +103,7 @@
 }
 
 .detail {
-	padding: 120px 15px 100px;
+	padding: 140px 15px 100px;
 	&__image {
 		position: relative;
 		width: 100%;
@@ -126,7 +124,6 @@
 		&__detail {
 			background: rgba(25, 25, 25, 0.85);
 			pointer-events: auto;
-
 			&__image {
 				opacity: 1;
 			}
@@ -160,23 +157,7 @@
 @media (max-width: 768px) {
 	.gallery {
 		&__wrapper {
-			flex-flow: column wrap;
-		}
-		&__image {
-			width: 50%;
-			&:nth-child(2n + 1) {
-				order: 1;
-			}
-			&:nth-child(2n) {
-				order: 2;
-			}
-		}
-	}
-}
-
-@media (max-width: 430px) {
-	.gallery {
-		&__wrapper {
+			gap: 15px;
 			flex-flow: column;
 			height: auto; // Змініть висоту на auto
 		}

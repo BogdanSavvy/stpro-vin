@@ -92,7 +92,7 @@ function ContactUsForm() {
 		{ name: 'Консультація' },
 		{ name: 'Стяжка підлоги' },
 		{ name: 'Штукатурка стін' },
-		{ name: 'Покрівля даху' },
+		{ name: 'Покрівля' },
 	];
 
 	const theme = createTheme({

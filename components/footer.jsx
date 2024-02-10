@@ -55,7 +55,7 @@ function Footer() {
 					<span className={styles.foooter__separator}></span>
 					<div className={styles.footer__bottom}>
 						<div className={styles.footer__copyright}>
-							2024 © STPRO-VIN. Всі права захищені.
+							2015 - 2024 © STPRO-VIN. Всі права захищені.
 						</div>
 						<ul className={styles.footer__socials}>
 							<li>

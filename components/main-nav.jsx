@@ -39,7 +39,7 @@ function MainNav({ position, closeSidebar }) {
 				},
 				{
 					href: '/servises/roofing',
-					label: 'Покрівля дахів',
+					label: 'Покрівля',
 				},
 			],
 		},
@@ -62,7 +62,7 @@ function MainNav({ position, closeSidebar }) {
 					{routes.map((route, index) => (
 						<li key={index}>
 							{route.links ? (
-								<span
+								<div
 									className={`${styles.navigation__ddTrigger} ${
 										route.isActive ? styles.activeLink : ''
 									}`}
@@ -80,16 +80,16 @@ function MainNav({ position, closeSidebar }) {
 											</li>
 										))}
 									</ul>
-								</span>
+								</div>
 							) : (
-								<span className={styles.navigation__item} key={route.href}>
+								<div className={styles.navigation__item} key={route.href}>
 									<Link
 										href={route.href}
 										className={route.isActive ? styles.activeLink : ''}
 									>
 										{route.label}
 									</Link>
-								</span>
+								</div>
 							)}
 						</li>
 					))}
@@ -113,7 +113,7 @@ function MainNav({ position, closeSidebar }) {
 									key={route.href}
 								>
 									{route.label}
-									<span className={''}></span>
+									<span></span>
 									<ul
 										className={`${styles.accordion__list} ${
 											openAcordion ? styles.open : ''
@@ -134,7 +134,7 @@ function MainNav({ position, closeSidebar }) {
 									</ul>
 								</div>
 							) : (
-								<span className={styles.sidebarNav__item} key={route.href}>
+								<div className={styles.sidebarNav__item} key={route.href}>
 									<Link
 										onClick={closeSidebar}
 										href={route.href}
@@ -142,7 +142,7 @@ function MainNav({ position, closeSidebar }) {
 									>
 										{route.label}
 									</Link>
-								</span>
+								</div>
 							)}
 						</li>
 					))}

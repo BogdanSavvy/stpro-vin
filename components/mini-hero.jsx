@@ -7,7 +7,7 @@ import styles from '@/styles/mini-hero.module.scss';
 import Container from '@/components/ui/container';
 import { textAnimation, miniHeroAnimation } from '@/lib/motion-animations';
 
-function MiniHero({ heading, description, image }) {
+function MiniHero({ heading, description, image, alt }) {
 	return (
 		<motion.section
 			initial="hidden"
@@ -34,13 +34,7 @@ function MiniHero({ heading, description, image }) {
 					</motion.p>
 				</article>
 			</Container>
-			<Image
-				fill
-				priority={true}
-				src={image}
-				alt="minihero_image"
-				sizes="100vw"
-			/>
+			<Image fill priority={true} src={image} alt={alt} sizes="100vw" />
 		</motion.section>
 	);
 }

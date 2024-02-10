@@ -7,7 +7,7 @@ import { MHeading } from '@/components/ui/heading';
 import styles from '@/styles/detail.module.scss';
 import { textAnimation, cardAnimation } from '@/lib/motion-animations';
 
-function Detail({ children, heading, image, reversed = false }) {
+function Detail({ children, heading, image, reversed = false, alt }) {
 	return (
 		<motion.article
 			initial="hidden"
@@ -34,7 +34,7 @@ function Detail({ children, heading, image, reversed = false }) {
 						variants={cardAnimation}
 						className={styles.detail__image}
 					>
-						<Image fill src={image} alt={'about_image'} sizes="100vw" />
+						<Image fill src={image} alt={alt} sizes="50vw" />
 					</motion.figure>
 				)}
 			</div>

@@ -13,7 +13,7 @@ import Quote from '@/components/quote';
 function Home() {
 	return (
 		<>
-			<Hero imageUrl="/hero.jpg" />
+			<Hero imageUrl="/images/styazhka_5.jpg" />
 			<ServisesSlider />
 			<AboutUs />
 			<ContactsBanner />
@@ -22,7 +22,11 @@ function Home() {
 			<GalleryBanner />
 			<ContatUs />
 			<FAQ />
-			<Quote autor="Філіп Кросбі" image="/hero_4.jpg">
+			<Quote
+				autor="Філіп Кросбі"
+				image="/images/quote_4.jpg"
+				alt="Цитата - Філіп Кросбі"
+			>
 				Якщо ви вважаєте, що <span>якість дорога,</span> то спробуйте{' '}
 				<span>невдалість</span>
 			</Quote>

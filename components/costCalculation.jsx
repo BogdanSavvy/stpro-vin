@@ -11,20 +11,22 @@ function CostCalculation({ data }) {
 					<article className={styles.description}>
 						<Heading>Розрахунок приблизної вартості</Heading>
 						<p className={styles.paragraph}>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Necessitatibus minima sequi beatae aperiam nemo doloribus
-							voluptas. Aspernatur sapiente id aliquam iste, eum quam laudantium
-							rerum magnam quae, maiores, doloremque cupiditate! Vitae fugiat
-							dicta, repudiandae, unde dolorem omnis modi autem repellat quia
-							laboriosam iure et nemo laborum magni sunt impedit facilis ab
-							beatae consequatur dignissimos accusamus officiis aut temporibus.
-							Iure, autem?
+							Ви можете швидко та зручно отримати орієнтовну вартість наших
+							послуг з урахуванням ваших унікальних потреб. Завдяки
+							інтерактивній формі, ви можете визначити ціну залежно від площі
+							приміщення та вибору матеріалу, додамо, що{' '}
+							<span>ми використовуємо найкращі матеріали</span> перевірення
+							часом. Будь ласка, зауважте, що отримана вартість є приблизною та
+							може змінитися під час детального обговорення вашого проекту та
+							врахування усіх індивідуальних вимог.
 						</p>
 						<p className={styles.paragraph}>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-							Deleniti, nihil ad ipsam aperiam asperiores esse molestias
-							praesentium excepturi. Ipsam ex, autem dolorum tenetur dignissimos
-							accusantium!
+							Даний розрахунок надає загальний огляд вартості та допомагає Вам{' '}
+							<span>
+								приблизно уявити фінансові витрати на ваш будівельний проект.
+							</span>{' '}
+							Для отримання точної вартості та детального консультування,
+							звертайтеся до наших фахівців.
 						</p>
 					</article>
 					<Calculator data={data} />
