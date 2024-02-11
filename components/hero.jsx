@@ -39,7 +39,7 @@ function Hero({ imageUrl }) {
 				fill
 				priority={true}
 				src={imageUrl}
-				alt="STPRO-VIN - плакат"
+				alt="STPRO-VIN - Головний плакат"
 				sizes="100vw"
 			/>
 		</section>

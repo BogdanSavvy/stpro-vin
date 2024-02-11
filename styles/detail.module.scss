@@ -1,27 +1,33 @@
 @import './assets/colors.scss';
 
 .detail {
-	margin-bottom: 80px;
+	padding-bottom: 80px;
 	position: relative;
 	z-index: 3;
 	overflow: hidden;
+
 	&__body {
 		display: flex;
 		flex-direction: row;
+		row-gap: 15px;
+		column-gap: 10px;
+
 		p {
 			text-align: justify;
 			padding-right: 20px;
 		}
 
 		@media (max-width: 767.9px) {
-			height: 100%;
+			flex-direction: column;
 			p {
 				padding-right: 0;
 			}
 		}
 	}
+
 	&__description {
 		flex: 1 0 60%;
+		z-index: 5;
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
@@ -73,8 +79,8 @@
 			&::after {
 				content: '';
 				position: absolute;
-				top: 25%;
-				left: 5px;
+				top: 12px;
+				left: 3px;
 				width: 10px;
 				height: 10px;
 				background-color: $gold;
@@ -83,39 +89,34 @@
 
 			@media (max-width: 768px) {
 				&::after {
-					top: 15%;
-				}
-			}
-			@media (max-width: 425px) {
-				&::after {
 					top: 10px;
 				}
 			}
 		}
 	}
 	&__image {
+		z-index: 5;
 		flex: 0 1 40%;
 		position: relative;
 		min-height: 450px;
 		img {
 			object-fit: cover;
 		}
-		@media (max-width: 767.9px) {
-			display: none;
-		}
 	}
 
 	&__bodyReversed {
 		display: flex;
 		flex-direction: row-reverse;
-		gap: 10px;
+		row-gap: 15px;
+		column-gap: 10px;
+
 		p {
 			text-align: justify;
 			padding-left: 20px;
 		}
 
 		@media (max-width: 767.9px) {
-			height: 100%;
+			flex-direction: column;
 			p {
 				padding-left: 0;
 			}

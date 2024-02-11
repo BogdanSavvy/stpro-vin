@@ -10,6 +10,13 @@ import ContactsBanner from '@/components/contacts-banner';
 import GalleryBanner from '@/components/gallery-banner';
 import Quote from '@/components/quote';
 
+export const metadata = {
+	title: 'Головна',
+	openGraph: {
+		images: '/images/hero_2.png',
+	},
+};
+
 function Home() {
 	return (
 		<>

@@ -7,8 +7,28 @@ import FAQ from '@/components/faq';
 import Quote from '@/components/quote';
 import ServiseWhenStart from '@/components/servise-when-start';
 
+export function generateMetadata({ params, searchParams }, parent) {
+	const servise = setData(params);
+
+	const { metaData } = servise;
+
+	return {
+		title: metaData.title,
+		description: metaData.description,
+		openGraph: {
+			images: metaData.Image,
+		},
+	};
+}
+
 const data = {
 	screed: {
+		metaData: {
+			title: 'Машинна Стяжка Підлоги',
+			description: `Найкращий спосіб зробити підлогу ідеально рівною - це замовити Машинну напівсуху стяжку підлоги у спецалістів з компанії STPRO-VIN у Вінниці та області, 
+			фіксована ціна протягом виконання роботи, безкоштовний виклик замірника, найкращий матеріал, до 300 кв\м за день, швидко, якісно та довговічно!`,
+			image: '/screed-machine.png',
+		},
 		hero: {
 			heading:
 				'Машинна напівсуха стяжка підлоги: Ідеальна основа для Вашого житла',
@@ -90,6 +110,12 @@ const data = {
 		},
 	},
 	plaster: {
+		metaData: {
+			title: 'Машинна Штукатурка Стін',
+			description: `Послуга Машинної штукатурки у місті Вінниця під ключ, зробимо все швидко якісно, зв'яжіться з нами та обговоримо деталі, якщо у вас великий об’єм робіт, 
+			то вартість за кв\м може бути меншою. За допомогою спеціальної технології та кваліфікованих майстрів перетворимо ваші стіни на витвір мистецва`,
+			image: '/plastering-machine.png',
+		},
 		hero: {
 			heading: 'Машинна штукатурка стін: Новий рівень естетики та надійності',
 			description:
@@ -163,6 +189,13 @@ const data = {
 		},
 	},
 	roofing: {
+		metaData: {
+			title: 'Покрівля, Розуклон поверхні',
+			description: `Інноваційний метод - Розуклонка плоского даху це процес встановлення нахилу на плоский дах, який допомагає воді стікати від центру до країв даху і водовідводів. 
+			Цей процес дуже важливий для запобігання зберігання води на даху та запобігати виникненню проблем з витоками та руйнуванням покриття даху. Працюємо в Вінниці та Вінницькій області. 
+			Зробимо швидко та на високому рівні, телефонуйте, або замовляйте консультацію, станьте нашим партнером вже зараз!`,
+			image: '/images/rozuklon_4.jpg',
+		},
 		hero: {
 			heading: 'Покрівля поверхні інноваційним методом розуклонів',
 			description:
@@ -244,24 +277,24 @@ const data = {
 	},
 };
 
-function ServisesPage({ params }) {
-	const setData = () => {
-		switch (params.servise) {
-			case 'screed': {
-				return data.screed;
-			}
-			case 'plaster': {
-				return data.plaster;
-			}
-			case 'roofing': {
-				return data.roofing;
-			}
-			default:
-				break;
+const setData = routeParams => {
+	switch (routeParams.servise) {
+		case 'screed': {
+			return data.screed;
 		}
-	};
+		case 'plaster': {
+			return data.plaster;
+		}
+		case 'roofing': {
+			return data.roofing;
+		}
+		default:
+			break;
+	}
+};
 
-	let serviseData = setData();
+function ServisesPage({ params }) {
+	const serviseData = setData(params);
 
 	return (
 		<>

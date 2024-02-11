@@ -5,11 +5,20 @@ import MiniHero from '@/components/mini-hero';
 import Quote from '@/components/quote';
 import WhyWe from '@/components/why-we';
 
+export const metadata = {
+	title: 'Про нас',
+	description: `Займаємося будівельною справою понад 9 років у м.Вінниця та області, спектр послуг: Машинна стяжка підлоги, Машинна штукатурка, Покрівля дахів та інших поверхонь. 
+		STPRO-VIN - Компанія, яку обирають!`,
+	openGraph: {
+		images: '/images/quote_3.jpg',
+	},
+};
+
 function AboutPage() {
 	return (
 		<>
 			<MiniHero
-				heading="Дякуємо, що завітали саме до нас. Ми компанія - STPRO-VIN"
+				heading="Дякуємо, що завітали саме до нас. Ми вінницька компанія - STPRO-VIN"
 				description="Ми - ваш надійний партнер у сфері створення комфортних та міцних просторів. Працюємо у м.Вінниця та Вінницькій області."
 				image="/hero.jpg"
 				alt="Міні плакат - Про нас (стяжка підлог в місті Вінниця)"

@@ -11,9 +11,12 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-	title: 'STPRO-VIN',
+	title: {
+		template: '%s | STPRO-VIN',
+		default: 'STPRO-VIN',
+	},
 	description:
-		'Машинна стяжка підлоги та інші будівельні послуги в м.Вінниця та у Вінницькій області',
+		'Машинна стяжка підлоги та інші будівельні послуги під ключ в місті Вінниця та у Вінницькій області.',
 };
 
 export default function RootLayout({ children }) {
