@@ -17,10 +17,9 @@ export const metadata = {
 	},
 	openGraph: {
 		images: {
-			url: '/_next/image?url=%2Fimages%2Fstyazhka_5.jpg&w=1080&q=75',
-			width: 800,
-			height: 600,
-			alt: 'Стяжка підлоги | STPRO-VIN',
+			url: '/images/styazhka_5.jpg',
+			width: 500,
+			height: 400,
 		},
 	},
 };
