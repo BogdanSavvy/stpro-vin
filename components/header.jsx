@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import styles from '@/styles/header.module.scss';
@@ -70,12 +71,20 @@ function Header() {
 							isMouseOn ? styles.stopAnimation : ''
 						}`}
 					>
-						<p>м.Вінниця</p>
+						<p>м.Вінниця, Вінницька область</p>
 						<p>
 							<Link href="tel:+380937330167">+38 (093) 733 0167</Link>
 						</p>
 						<p>
-							<Link href="tel:+380930002222">Номер телефону 2</Link>
+							<Link href="tel:+380937330167">
+								Viber{' '}
+								<Image
+									src="/icons/viber.png"
+									width={16}
+									height={16}
+									alt="Іконка - Viber"
+								/>
+							</Link>
 						</p>
 						<p>
 							<Link href="mailto:Styazhkaprovin@gmail.com">
@@ -88,12 +97,20 @@ function Header() {
 							isMouseOn ? styles.stopAnimation : ''
 						}`}
 					>
-						<p>м.Вінниця</p>
+						<p>м.Вінниця, Вінницька область</p>
 						<p>
 							<Link href="tel:+380937330167">+38 (093) 733 0167</Link>
 						</p>
 						<p>
-							<Link href="tel:+380930002222">Номер телефону 2</Link>
+							<Link href="tel:+380937330167">
+								Viber{' '}
+								<Image
+									src="/icons/viber.png"
+									width={18}
+									height={18}
+									alt="Іконка - Viber"
+								/>
+							</Link>
 						</p>
 						<p>
 							<Link href="mailto:Styazhkaprovin@gmail.com">

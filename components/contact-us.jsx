@@ -56,7 +56,6 @@ function ContatUs() {
 								</figure>
 								<div className={styles.card__contacts}>
 									<Link href="tel:+380937330167">+38 (093) 733 0167</Link>
-									<Link href="tel:+380930582222">+38 (093) 058 2222</Link>
 								</div>
 							</motion.article>
 							<motion.article

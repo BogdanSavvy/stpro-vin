@@ -57,7 +57,7 @@ function Footer() {
 						<div className={styles.footer__copyright}>
 							2015 - 2024 © STPRO-VIN. Всі права захищені.
 						</div>
-						<ul className={styles.footer__socials}>
+						{/* <ul className={styles.footer__socials}>
 							<li>
 								<Link href="/">
 									<TelegramIcon />
@@ -73,7 +73,7 @@ function Footer() {
 									<FacebookIcon />
 								</Link>
 							</li>
-						</ul>
+						</ul> */}
 					</div>
 				</div>
 			</Container>

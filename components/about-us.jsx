@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import styles from '@/styles/about-us.module.scss';
 import Container from '@/components/ui/container';
 import { MHeading } from '@/components/ui/heading';
-import { textAnimation, achivmentsAnimation } from '@/lib/motion-animations';
+import { textAnimation, flipAnimation } from '@/lib/motion-animations';
 
 function AboutUs() {
 	return (
@@ -45,40 +45,56 @@ function AboutUs() {
 							рішень, які перетворять ваші ідеї в реальність.
 						</p>
 					</motion.article>
-					<motion.div
-						custom={2}
-						variants={achivmentsAnimation}
-						className={styles.aboutUs__grid}
-					>
-						<div className={styles.aboutUs__gridChild}>
+					<div className={styles.aboutUs__grid}>
+						<motion.div
+							variants={flipAnimation}
+							custom={2}
+							className={styles.aboutUs__gridChild}
+						>
 							9+ <br /> <span>років</span>
-						</div>
-						<div className={styles.aboutUs__gridChild}>
+						</motion.div>
+						<motion.div
+							variants={flipAnimation}
+							custom={3}
+							className={styles.aboutUs__gridChild}
+						>
 							1500+ <br /> <span>клієнтів</span>
-						</div>
-						<figure className={styles.aboutUs__gridChild}>
+						</motion.div>
+						<motion.figure
+							variants={flipAnimation}
+							custom={4}
+							className={styles.aboutUs__gridChild}
+						>
 							<Image
 								fill
 								src="/images/rozuklon_4.jpg"
 								alt="Покрівля поверхні басейну методом розуклонів"
 								sizes="50vw"
 							/>
-						</figure>
-						<figure className={styles.aboutUs__gridChild}>
+						</motion.figure>
+						<motion.figure
+							variants={flipAnimation}
+							custom={5}
+							className={styles.aboutUs__gridChild}
+						>
 							<Image
 								fill
 								src="/images/styazhka_work_1.jpg"
 								alt="Напівсуха стяжка підлоги в роботі"
 								sizes="50vw"
 							/>
-						</figure>
-						<div className={styles.aboutUs__gridChild}>
+						</motion.figure>
+						<motion.div
+							variants={flipAnimation}
+							custom={6}
+							className={styles.aboutUs__gridChild}
+						>
 							50K+ <br />
 							<span>
 								м<sup>2</sup>
 							</span>
-						</div>
-					</motion.div>
+						</motion.div>
+					</div>
 				</div>
 			</Container>
 		</motion.section>

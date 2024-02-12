@@ -17,9 +17,7 @@ export const metadata = {
 	},
 	openGraph: {
 		images: {
-			url: '/images/styazhka_5.jpg',
-			width: 500,
-			height: 400,
+			url: '/images/hero_main.jpg',
 		},
 	},
 };

@@ -28,6 +28,10 @@ export const metadata = {
 	openGraph: {
 		type: 'website',
 		locale: 'uk_UA',
+		images: {
+			width: 900,
+			height: 600,
+		},
 	},
 	robots: {
 		index: true,
