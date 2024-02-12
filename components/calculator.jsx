@@ -95,6 +95,7 @@ function Calculator({ data }) {
 	return (
 		<ThemeProvider theme={theme}>
 			<form
+				aria-label="Розрахунок приблизної вартості"
 				onChange={handleSubmit(handleCalculate)}
 				className={styles.calculator}
 				noValidate
@@ -114,13 +115,18 @@ function Calculator({ data }) {
 								<FormLabel id="demo-radio-buttons-group-label">
 									Оберіть чіїм матеріалом буде виконуватись робота:
 								</FormLabel>
-								<RadioGroup row {...field}>
+								<RadioGroup
+									aria-label="Оберіть чиїм матеріалом буде виконуватись робота"
+									row
+									{...field}
+								>
 									{RadioButtonsOptions.map((radioButton, index) => (
 										<FormControlLabel
 											key={index}
+											label={radioButton.label}
+											aria-labelledby={radioButton.label}
 											value={radioButton.value}
 											control={<Radio />}
-											label={radioButton.label}
 										/>
 									))}
 								</RadioGroup>
@@ -130,6 +136,7 @@ function Calculator({ data }) {
 					<TextField
 						{...register('square')}
 						label="Введіть площу поверхні"
+						aria-label="Площа"
 						variant="standard"
 						type="number"
 						placeholder="0"

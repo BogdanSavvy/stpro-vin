@@ -165,6 +165,7 @@ function ContactUsForm() {
 	return (
 		<ThemeProvider theme={theme}>
 			<form
+				aria-label="Заповніть форму і ми з вами зв'яжемось"
 				onSubmit={handleSubmit(onSubmit)}
 				className={styles.contactUs__form}
 				noValidate
@@ -172,10 +173,12 @@ function ContactUsForm() {
 				<TextField
 					{...register('name')}
 					required
+					name="Ім'я"
 					label="Ім'я"
+					aria-label="Ім'я клієнта"
 					variant="standard"
-					multiline
 					placeholder="ПІБ"
+					autoComplete="Ваше ім'я"
 					error={errors.name && true}
 					helperText={errors.name?.message}
 					className={styles.contactUs__field}
@@ -183,7 +186,9 @@ function ContactUsForm() {
 				<TextField
 					{...register('phoneNumber')}
 					required
+					name="Номер телефону"
 					label="Номер телефону"
+					aria-label="Контактний номер клієнта"
 					variant="standard"
 					InputProps={{
 						startAdornment: (
@@ -198,11 +203,25 @@ function ContactUsForm() {
 					control={control}
 					name="servise"
 					render={({ field }) => (
-						<FormControl className={styles.contactUs__field}>
-							<InputLabel>Оберіть послугу (не обов'язково)</InputLabel>
-							<Select label="Послуги" variant="standard" {...field}>
+						<FormControl
+							aria-label="Поле вибору послуги"
+							className={styles.contactUs__field}
+						>
+							<InputLabel aria-label="Оберіть послугу">
+								Оберіть послугу (не обов'язково)
+							</InputLabel>
+							<Select
+								label="Послуги"
+								aria-labelledby="Оберіть вид послуги"
+								variant="standard"
+								{...field}
+							>
 								{selectOptions.map((option, index) => (
-									<MenuItem key={index} value={option.name}>
+									<MenuItem
+										aria-labelledby={option.name}
+										key={index}
+										value={option.name}
+									>
 										{option.name}
 									</MenuItem>
 								))}
@@ -213,6 +232,7 @@ function ContactUsForm() {
 				<TextField
 					{...register('message')}
 					label="Повідомлення (не обов'язково)"
+					aria-label="Повідомлення клієнта"
 					variant="standard"
 					multiline
 					rows={5}

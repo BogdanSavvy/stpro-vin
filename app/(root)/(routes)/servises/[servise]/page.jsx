@@ -105,8 +105,8 @@ const data = {
 			alt: 'Процес роботи майстра STPRO-VIN',
 		},
 		prices: {
-			ourMaterials: '280',
-			customerMaterials: '180',
+			ourMaterials: '290',
+			customerMaterials: '130',
 		},
 		faq: [
 			{
@@ -244,7 +244,7 @@ const data = {
 		},
 		prices: {
 			ourMaterials: '330',
-			customerMaterials: '230',
+			customerMaterials: '140',
 		},
 		faq: [
 			{
@@ -380,8 +380,8 @@ const data = {
 			alt: 'Покрівля даху з уклоном (виконана)',
 		},
 		prices: {
-			ourMaterials: '260',
-			customerMaterials: '160',
+			ourMaterials: '310',
+			customerMaterials: '130',
 		},
 		faq: [
 			{
