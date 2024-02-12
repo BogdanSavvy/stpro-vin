@@ -12,8 +12,11 @@ import Quote from '@/components/quote';
 
 export const metadata = {
 	title: 'Головна',
+	alternates: {
+		canonical: '/',
+	},
 	openGraph: {
-		images: '/images/hero_2.png',
+		images: '/_next/image?url=%2Fimages%2Fstyazhka_5.jpg&w=1080&q=75',
 	},
 };
 

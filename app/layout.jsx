@@ -17,6 +17,26 @@ export const metadata = {
 	},
 	description:
 		'Машинна стяжка підлоги та інші будівельні послуги під ключ в місті Вінниця та у Вінницькій області.',
+	keywords: [
+		'Машинна стяжка підлоги',
+		'Машинна штукатурка стін',
+		'Покрівля',
+		'Будівельні послуги',
+		'Ремонт',
+	],
+	openGraph: {
+		type: 'website',
+		locale: 'uk_UA',
+	},
+	robots: {
+		index: true,
+		follow: true,
+		nocache: false,
+	},
+};
+
+export const viewport = {
+	themeColor: 'dark',
 };
 
 export default function RootLayout({ children }) {

@@ -16,7 +16,7 @@ export function generateMetadata({ params, searchParams }, parent) {
 		title: metaData.title,
 		description: metaData.description,
 		openGraph: {
-			images: metaData.Image,
+			images: metaData.image,
 		},
 	};
 }

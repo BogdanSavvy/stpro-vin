@@ -9,6 +9,11 @@ export const metadata = {
 	openGraph: {
 		images: '/images/hero_contacts.png',
 	},
+	robots: {
+		index: false,
+		follow: false,
+		nocache: false,
+	},
 };
 
 function ContactsPage() {
