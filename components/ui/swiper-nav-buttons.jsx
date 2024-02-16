@@ -10,6 +10,8 @@ function SwiperNavButtons() {
 	return (
 		<div className={styles.sliderActions}>
 			<button
+				aria-label="Наступний слайд"
+				role="button"
 				onClick={() => swiper.slideNext()}
 				className={styles.sliderActions__nextButton}
 			>
@@ -17,6 +19,8 @@ function SwiperNavButtons() {
 				<span className={styles.nextArrow}></span>
 			</button>
 			<button
+				aria-label="Попередній слайд"
+				role="button"
 				onClick={() => swiper.slidePrev()}
 				className={styles.sliderActions__prevButton}
 			>

@@ -10,7 +10,8 @@ export const metadata = {
 	description: `Займаємося будівельною справою понад 9 років у м.Вінниця та області, спектр послуг: Машинна стяжка підлоги, Машинна штукатурка, Покрівля дахів та інших поверхонь. 
 		STPRO-VIN - Компанія, яку обирають!`,
 	openGraph: {
-		images: '/images/hero_about.png',
+		images: '/opengraph-image.png',
+		alt: '/opengraph-image.alt.txt',
 	},
 };
 

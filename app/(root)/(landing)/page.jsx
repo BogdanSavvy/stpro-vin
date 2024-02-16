@@ -13,12 +13,11 @@ import Quote from '@/components/quote';
 export const metadata = {
 	title: 'Головна',
 	alternates: {
-		canonical: '/',
+		canonical: './',
 	},
 	openGraph: {
-		images: {
-			url: '/images/hero_main.jpg',
-		},
+		images: '/opengraph-image.png',
+		alt: '/opengraph-image.alt.txt',
 	},
 };
 

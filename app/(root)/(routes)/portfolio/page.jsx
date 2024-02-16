@@ -6,7 +6,8 @@ export const metadata = {
 	description:
 		'Перегляньте та переконайтесь у вишуканості наших проектів. Замовляйте Напівсуху стяжку, штукатурку та покрівлю у нас за найкращою ціною та якістю, м.Вінниця та область.',
 	openGraph: {
-		images: '/images/hero_gallery.png',
+		images: '/opengraph-image.png',
+		alt: '/opengraph-image.alt.txt',
 	},
 };
 

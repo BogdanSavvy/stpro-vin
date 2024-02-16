@@ -18,7 +18,7 @@ export const sendOrderAction = async message => {
 				}),
 			},
 		);
-	
+
 		return response;
 	} catch (error) {
 		console.error('Помилка при відправленні POST-запиту:', error);
