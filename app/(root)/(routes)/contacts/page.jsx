@@ -7,8 +7,7 @@ export const metadata = {
 	description:
 		'Замовляйте замірника вже сьогодні та вділюйте ваші задумки в реальність з лідером у сфері машинної стяжки в місті Вінниця',
 	openGraph: {
-		images: '/opengraph-image.png',
-		alt: '/opengraph-image.alt.txt',
+		images: '/images/hero_contacts.png',
 	},
 	robots: {
 		index: false,

@@ -173,7 +173,6 @@ function ContactUsForm() {
 				<TextField
 					{...register('name')}
 					required
-					name="Ім'я"
 					label="Ім'я"
 					aria-label="Ім'я клієнта"
 					variant="standard"
@@ -186,7 +185,6 @@ function ContactUsForm() {
 				<TextField
 					{...register('phoneNumber')}
 					required
-					name="Номер телефону"
 					label="Номер телефону"
 					aria-label="Контактний номер клієнта"
 					variant="standard"

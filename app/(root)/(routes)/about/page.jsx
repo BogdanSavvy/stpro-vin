@@ -11,7 +11,6 @@ export const metadata = {
 		STPRO-VIN - Компанія, яку обирають!`,
 	openGraph: {
 		images: '/opengraph-image.png',
-		alt: '/opengraph-image.alt.txt',
 	},
 };
 

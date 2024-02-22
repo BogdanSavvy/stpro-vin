@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-	// metadataBase: new URL('https://stpro-vin.vercel.app'),
+	metadataBase: new URL('https://stpro-vin.com'),
 	title: {
 		template: '%s | STPRO-VIN',
 		default: 'STPRO-VIN',

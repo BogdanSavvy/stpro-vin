@@ -16,8 +16,7 @@ export const metadata = {
 		canonical: './',
 	},
 	openGraph: {
-		images: '/opengraph-image.png',
-		alt: '/opengraph-image.alt.txt',
+		images: '/images/hero_main.png',
 	},
 };
 
