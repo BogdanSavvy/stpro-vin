@@ -9,7 +9,7 @@ function Company() {
 			<Container>
 				<Detail
 					heading="Про компанію"
-					image="/company_about.jpg"
+					image="/images/company_about.jpg"
 					alt="STPRO-VIN - Про нас"
 				>
 					<p>
@@ -66,7 +66,7 @@ function Company() {
 				</Detail>
 				<Detail
 					heading="Наш Досвід"
-					image="/company_expirience.jpg"
+					image="/images/company_expirience.jpg"
 					alt="STPRO-VIN - Досвід"
 				>
 					<p>
@@ -85,7 +85,7 @@ function Company() {
 				</Detail>
 				<Detail
 					heading="Наші Стандарти"
-					image="/company_standarts.jpg"
+					image="/images/company_standarts.jpg"
 					alt="STPRO-VIN - Стандарти"
 					reversed={true}
 				>
