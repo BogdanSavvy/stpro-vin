@@ -5,166 +5,214 @@ import Image from 'next/image';
 
 import styles from '@/styles/gallery.module.scss';
 
-const images = [
-	{
-		src: '/images/styazhka_1.jpg',
-		width: '800',
-		height: '500',
-		caption: '1',
-	},
-	{
-		src: '/images/styazhka_2.jpg',
-		width: '800',
-		height: '600',
-		caption: '2',
-	},
-	{
-		src: '/images/styazhka_3.jpg',
-		width: '800',
-		height: '500',
-		caption: '3',
-	},
-	{
-		src: '/images/styazhka_8.jpg',
-		width: '800',
-		height: '500',
-		caption: '4',
-	},
-	{
-		src: '/images/plaster_2.jpg',
-		width: '800',
-		height: '600',
-		caption: '5',
-	},
-	{
-		src: '/images/plaster_3.jpg',
-		width: '800',
-		height: '600',
-		caption: '6',
-	},
-	{
-		src: '/images/rozuklon_2.jpg',
-		width: '800',
-		height: '500',
-		caption: '7',
-	},
-	{
-		src: '/images/rozuklon_3.jpg',
-		width: '800',
-		height: '600',
-		caption: '8',
-	},
-	{
-		src: '/images/styazhka_5.jpg',
-		width: '800',
-		height: '600',
-		caption: '9',
-	},
-	{
-		src: '/images/styazhka_9.jpg',
-		width: '800',
-		height: '500',
-		caption: '10',
-	},
-	{
-		src: '/images/styazhka_10.jpg',
-		width: '800',
-		height: '600',
-		caption: '11',
-	},
-	{
-		src: '/images/styazhka_11.jpg',
-		width: '800',
-		height: '600',
-		caption: '12',
-	},
-	{
-		src: '/images/styazhka_12.jpg',
-		width: '800',
-		height: '500',
-		caption: '13',
-	},
-	{
-		src: '/images/styazhka_13.jpg',
-		width: '800',
-		height: '500',
-		caption: '14',
-	},
-	{
-		src: '/images/styazhka_14.jpg',
-		width: '800',
-		height: '700',
-		caption: '15',
-	},
-	{
-		src: '/images/styazhka_15.jpg',
-		width: '800',
-		height: '600',
-		caption: '16',
-	},
-	{
-		src: '/images/styazhka_16.jpg',
-		width: '800',
-		height: '650',
-		caption: '17',
-	},
-	{
-		src: '/images/styazhka_17.jpg',
-		width: '800',
-		height: '600',
-		caption: '18',
-	},
-	{
-		src: '/images/styazhka_18.jpg',
-		width: '800',
-		height: '400',
-		caption: '19',
-	},
-	{
-		src: '/images/styazhka_19.jpg',
-		width: '800',
-		height: '500',
-		caption: '20',
-	},
-	{
-		src: '/images/styazhka_20.jpg',
-		width: '800',
-		height: '600',
-		caption: '21',
-	},
-	{
-		src: '/images/styazhka_21.jpg',
-		width: '800',
-		height: '800',
-		caption: '22',
-	},
-	{
-		src: '/images/styazhka_22.jpg',
-		width: '800',
-		height: '500',
-		caption: '23',
-	},
-	{
-		src: '/images/styazhka_work_4.jpg',
-		width: '800',
-		height: '500',
-		caption: '24',
-	},
-	{
-		src: '/images/styazhka_23.jpg',
-		width: '800',
-		height: '600',
-		caption: '25',
-	},
-	{
-		src: '/images/styazhka_23.jpg',
-		width: '800',
-		height: '400',
-		caption: '25',
-	},
-];
-
 function Gallery() {
+	const images = [
+		{
+			src: '/images/styazhka_1.jpg',
+			width: '800',
+			height: '500',
+			caption: '1',
+		},
+		{
+			src: '/images/styazhka_2.jpg',
+			width: '800',
+			height: '600',
+			caption: '2',
+		},
+		{
+			src: '/images/styazhka_3.jpg',
+			width: '800',
+			height: '500',
+			caption: '3',
+		},
+		{
+			src: '/images/styazhka_8.jpg',
+			width: '800',
+			height: '500',
+			caption: '4',
+		},
+		{
+			src: '/images/plaster_2.jpg',
+			width: '800',
+			height: '600',
+			caption: '5',
+		},
+		{
+			src: '/images/plaster_3.jpg',
+			width: '800',
+			height: '600',
+			caption: '6',
+		},
+		{
+			src: '/images/plaster_5.jpg',
+			width: '800',
+			height: '600',
+			caption: '7',
+		},
+		{
+			src: '/images/plaster_6.jpg',
+			width: '800',
+			height: '600',
+			caption: '8',
+		},
+		{
+			src: '/images/plaster_7.jpg',
+			width: '800',
+			height: '600',
+			caption: '9',
+		},
+		{
+			src: '/images/plaster_8.jpg',
+			width: '800',
+			height: '600',
+			caption: '10',
+		},
+		{
+			src: '/images/plaster_9.jpg',
+			width: '800',
+			height: '600',
+			caption: '11',
+		},
+		{
+			src: '/images/plaster_10.jpg',
+			width: '800',
+			height: '600',
+			caption: '12',
+		},
+		{
+			src: '/images/plaster_11.jpg',
+			width: '800',
+			height: '600',
+			caption: '13',
+		},
+		{
+			src: '/images/plaster_12.jpg',
+			width: '800',
+			height: '600',
+			caption: '14',
+		},
+		{
+			src: '/images/rozuklon_2.jpg',
+			width: '800',
+			height: '500',
+			caption: '15',
+		},
+		{
+			src: '/images/rozuklon_3.jpg',
+			width: '800',
+			height: '600',
+			caption: '16',
+		},
+		{
+			src: '/images/styazhka_5.jpg',
+			width: '800',
+			height: '600',
+			caption: '17',
+		},
+		{
+			src: '/images/styazhka_9.jpg',
+			width: '800',
+			height: '500',
+			caption: '18',
+		},
+		{
+			src: '/images/styazhka_10.jpg',
+			width: '800',
+			height: '600',
+			caption: '19',
+		},
+		{
+			src: '/images/styazhka_11.jpg',
+			width: '800',
+			height: '600',
+			caption: '20',
+		},
+		{
+			src: '/images/styazhka_12.jpg',
+			width: '800',
+			height: '500',
+			caption: '21',
+		},
+		{
+			src: '/images/styazhka_13.jpg',
+			width: '800',
+			height: '500',
+			caption: '22',
+		},
+		{
+			src: '/images/styazhka_14.jpg',
+			width: '800',
+			height: '700',
+			caption: '23',
+		},
+		{
+			src: '/images/styazhka_15.jpg',
+			width: '800',
+			height: '600',
+			caption: '24',
+		},
+		{
+			src: '/images/styazhka_16.jpg',
+			width: '800',
+			height: '650',
+			caption: '25',
+		},
+		{
+			src: '/images/styazhka_17.jpg',
+			width: '800',
+			height: '600',
+			caption: '26',
+		},
+		{
+			src: '/images/styazhka_18.jpg',
+			width: '800',
+			height: '400',
+			caption: '27',
+		},
+		{
+			src: '/images/styazhka_19.jpg',
+			width: '800',
+			height: '500',
+			caption: '28',
+		},
+		{
+			src: '/images/styazhka_20.jpg',
+			width: '800',
+			height: '600',
+			caption: '29',
+		},
+		{
+			src: '/images/styazhka_21.jpg',
+			width: '800',
+			height: '800',
+			caption: '30',
+		},
+		{
+			src: '/images/styazhka_22.jpg',
+			width: '800',
+			height: '500',
+			caption: '31',
+		},
+		{
+			src: '/images/styazhka_work_4.jpg',
+			width: '800',
+			height: '500',
+			caption: '32',
+		},
+		{
+			src: '/images/styazhka_23.jpg',
+			width: '800',
+			height: '600',
+			caption: '33',
+		},
+		{
+			src: '/images/styazhka_23.jpg',
+			width: '800',
+			height: '400',
+			caption: '34',
+		},
+	];
+
 	const [detailImage, setDetailImage] = useState(null);
 
 	const openDetail = image => {
